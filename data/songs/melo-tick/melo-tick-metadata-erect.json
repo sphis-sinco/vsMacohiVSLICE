@@ -12,13 +12,10 @@
         "altVocals": {}
     },
     "playData": {
-        "songVariations": [
-            "erect"
-        ],
+        "songVariations": [],
         "difficulties": [
-            "easy",
-            "normal",
-            "hard"
+            "erect",
+            "nightmare"
         ],
         "characters": {
             "player": "bf",
@@ -36,11 +33,9 @@
         "stage": "void",
         "noteStyle": "funkin",
         "ratings": {
-            "easy": 4,
-            "normal": 6,
-            "hard": 8
+            "nightmare": 10,
+            "erect": 8
         },
-        "album": "macohiAlbum1",
         "previewStart": 0,
         "previewEnd": 0
     },
