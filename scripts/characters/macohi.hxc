@@ -1,0 +1,36 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.audio.FunkinSound;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import funkin.FunkinMemory;
+
+class Macohi extends MultiSparrowCharacter {
+	function new() {
+		super('macohi');
+	}
+
+	function onNoteHit(event:HitNoteScriptEvent)
+	{
+		if (event.eventCanceled)
+		{
+			// onNoteHit event was cancelled by the gameplay module.
+			return;
+		}
+
+		switch (event.note.kind) 
+		{
+			case "MacohiBeepbox":
+				holdTimer = 0;
+				this.playSingAnimation(event.note.noteData.getDirection(), false, 'beepbox');
+				return;
+			default:
+				super.onNoteHit(event);
+		}
+	}
+
+	override function destroy():Void 
+	{
+		super.destroy();
+	}
+}
