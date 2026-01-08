@@ -1,6 +1,4 @@
 import funkin.play.song.Song;
-import funkin.save.Save;
-import funkin.graphics.shaders.AdjustColorShader;
 import funkin.graphics.shaders.DropShadowShader;
 import funkin.play.PlayState;
 import funkin.play.stage.StageProp;
@@ -13,29 +11,12 @@ class MeloTickErect extends Song {
 		});
 	}
 
-	var colorShaderBf:AdjustColorShader;
-	var colorShaderDad:AdjustColorShader;
-
     var bfRim = new DropShadowShader();
     var bgRim = new DropShadowShader();
     var dadRim = new DropShadowShader();
 
 	function onCreate(event:ScriptEvent) {
 		super.onCreate();
-
-		colorShaderBf = new AdjustColorShader();
-		colorShaderDad = new AdjustColorShader();
-
-		colorShaderBf.brightness = -23;
-		colorShaderBf.hue = 12;
-		colorShaderBf.contrast = 7;
-		colorShaderBf.saturation = 0;
-
-		colorShaderDad.brightness = -33;
-		colorShaderDad.hue = -32;
-		colorShaderDad.contrast = -23;
-		colorShaderDad.saturation = 0;
-
 		
 		bfRim.setAdjustColor(-100, -40, -50, -50);
 		bfRim.color = FlxColor.fromString("#3E333C");
@@ -78,23 +59,11 @@ class MeloTickErect extends Song {
 				wallOverlay.y = white.y;
 				wallOverlay.zIndex = (white?.zIndex ?? 2) + 1;
 				wallOverlay.scrollFactor = white.scrollFactor;
-				// wallOverlay.shader = bgRim;
-
-				var floorOverlay = new StageProp();
-				floorOverlay.makeSolidColor(wallOverlay.width, wallOverlay.height / 2, FlxColor.fromString('#453660ff'));
-				floorOverlay.x = wallOverlay.x;
-				floorOverlay.y = wallOverlay.y + floorOverlay.height / 1.05;
-				floorOverlay.zIndex = wallOverlay.zIndex + 1;
-				floorOverlay.scrollFactor = wallOverlay.scrollFactor;
-				floorOverlay.shader = bgRim;
 
 				PlayState.instance.currentStage.addProp(wallOverlay);
-				// PlayState.instance.currentStage.addProp(floorOverlay);
 				PlayState.instance.currentStage.refresh();
 
 				addedBGShader = true;
-				// white.shader = bgRim;
-				// bgRim.attachedSprite = white;
 			}
 			else
 			{
