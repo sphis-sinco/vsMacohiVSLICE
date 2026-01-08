@@ -7,14 +7,6 @@
   },
   "events": [
     {
-      "t": 0,
-      "e": "FocusCamera",
-      "v": {
-        "char": 0,
-        "ease": "INSTANT"
-      }
-    },
-    {
       "t": 6857.14285714286,
       "e": "FocusCamera",
       "v": {
