@@ -47,6 +47,16 @@ class MeloTickErect extends Song {
 	{
 		addedShaders = addedDadShader && addedBoyShader && addedBGShader;
 
+		if (PlayState.instance?.currentStage?.getDad() != null && addedDadShader)
+		{
+			var dad = PlayState.instance.currentStage.getDad();
+			
+			if (dad.animation.name.contains('-beepbox'))
+				dadRim.loadAltMask(Paths.image('characters/macohi-rim'));
+			else
+				dadRim.loadAltMask(Paths.image('characters/macohi-beepbox-rim'));
+		}
+
 		if (PlayState.instance.currentStage != null && !addedShaders)
 		{
 			if (PlayState.instance.currentStage.getNamedProp('white') != null && !addedBGShader)
