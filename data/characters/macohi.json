@@ -1,0 +1,52 @@
+{
+    "version": "1.0.0",
+    "name": "Macohi",
+    "assetPath": "characters/macohi",
+    "singTime": 8.0,
+    "offsets": [
+        0,
+        0
+    ],
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "macohi animation idle",
+            "offsets": [
+                0,
+                0
+            ]
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "macohi animation Left0",
+            "offsets": [
+                0,
+                0
+            ]
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "macohi animation down0",
+            "offsets": [
+                0,
+                0
+            ]
+        },
+        {
+            "name": "singUP",
+            "prefix": "macohi animation up0",
+            "offsets": [
+                0,
+                0
+            ]
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "macohi animation right0",
+            "offsets": [
+                0,
+                0
+            ]
+        }
+    ]
+}
