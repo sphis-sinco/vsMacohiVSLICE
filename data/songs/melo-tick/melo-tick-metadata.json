@@ -12,6 +12,7 @@
         "altVocals": {}
     },
     "playData": {
+        "album": "macohiAlbum1",
         "songVariations": [],
         "difficulties": [
             "easy",

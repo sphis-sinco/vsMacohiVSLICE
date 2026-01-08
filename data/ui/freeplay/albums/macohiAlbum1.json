@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "Macohi Album 1",
+  "artists": ["Macohi"],
+  "albumArtAsset": "freeplay/albumRoll/macohiAlbum1",
+  "albumTitleAsset": "freeplay/albumRoll/macohiAlbum1-text",
+  "albumTitleOffsets": [0, 0]
+}
