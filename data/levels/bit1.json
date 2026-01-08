@@ -4,13 +4,13 @@
   "titleAsset": "storymenu/titles/bit1",
   "props": [
     {
-      "assetPath": "storymenu/props/dad",
-      "scale": 1.0,
-      "offsets": [100, 60],
+      "assetPath": "storymenu/props/macohi",
+      "scale": 0.75,
+      "offsets": [100, 30],
       "animations": [
         {
           "name": "idle",
-          "prefix": "idle0",
+          "prefix": "macohi storymode",
           "frameRate": 24
         }
       ]
