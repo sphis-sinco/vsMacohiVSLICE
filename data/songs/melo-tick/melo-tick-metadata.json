@@ -1,62 +1,57 @@
 {
-    "version": "2.2.4",
-    "songName": "Melo Tick",
-    "artist": "Macohi",
-    "charter": "Macohi",
-    "divisions": 96,
-    "looped": false,
-    "offsets": {
-        "instrumental": 0,
-        "altInstrumentals": {},
-        "vocals": {},
-        "altVocals": {}
-    },
-    "playData": {
-        "album": "macohiAlbum1",
-        "songVariations": [],
-        "difficulties": [
-            "easy",
-            "normal",
-            "hard"
-        ],
-        "characters": {
-            "player": "bf",
-            "girlfriend": "",
-            "opponent": "macohi",
-            "instrumental": "",
-            "altInstrumentals": [],
-            "opponentVocals": [
-                "macohi"
-            ],
-            "playerVocals": [
-                "bf"
-            ]
-        },
-        "stage": "void",
-        "noteStyle": "funkin",
-        "ratings": {
-            "easy": 4,
-            "normal": 6,
-            "hard": 8
-        },
-        "previewStart": 0,
-        "previewEnd": 0
-    },
-    "generatedBy": "Friday Night Funkin' - v0.8.1",
-    "timeFormat": "ms",
-    "timeChanges": [
-        {
-            "t": 0,
-            "b": 0,
-            "bpm": 140,
-            "n": 4,
-            "d": 4,
-            "bt": [
-                4,
-                4,
-                4,
-                4
-            ]
-        }
-    ]
+ "version": "2.2.4",
+ "songName": "Melo Tick",
+ "artist": "Macohi",
+ "charter": "Macohi",
+ "divisions": 96,
+ "looped": false,
+ "offsets": {
+  "instrumental": 0,
+  "altInstrumentals": {  },
+  "vocals": {  },
+  "altVocals": {  }
+ },
+ "playData": {
+  "songVariations": [],
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "bf",
+   "girlfriend": "",
+   "opponent": "macohi",
+   "instrumental": "",
+   "altInstrumentals": [],
+   "opponentVocals": [
+    "macohi"
+   ],
+   "playerVocals": [
+    "bf"
+   ]
+  },
+  "stage": "void",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 4,
+   "normal": 6,
+   "hard": 8
+  },
+  "album": "macohiAlbum1",
+  "previewStart": 0,
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.1",
+ "timeFormat": "ms",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 140,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
 }

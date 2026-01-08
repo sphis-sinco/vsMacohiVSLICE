@@ -7,7 +7,7 @@
             "angle": 0,
             "animType": "sparrow",
             "animations": [],
-            "assetPath": "#000000",
+            "assetPath": "#FFFFFF",
             "atlasSettings": null,
             "blend": "",
             "color": "#FFFFFF",
@@ -17,13 +17,13 @@
             "isPixel": true,
             "name": "white",
             "position": [
-                -2410,
-                -2810
+                0,
+                0
             ],
             "scale": 6000,
             "scroll": [
-                1,
-                1
+                0,
+                0
             ],
             "startingAnimation": "",
             "zIndex": 2
@@ -53,7 +53,7 @@
             "angle": 0,
             "cameraOffsets": [
                 0,
-                -90
+                0
             ],
             "position": [
                 0,
