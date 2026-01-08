@@ -3,6 +3,8 @@ import funkin.save.Save;
 import funkin.graphics.shaders.AdjustColorShader;
 import funkin.graphics.shaders.DropShadowShader;
 import funkin.play.PlayState;
+import funkin.play.stage.StageProp;
+import flixel.util.FlxColor;
 
 class MeloTickErect extends Song {
 	public function new() {
@@ -15,6 +17,7 @@ class MeloTickErect extends Song {
 	var colorShaderDad:AdjustColorShader;
 
     var bfRim = new DropShadowShader();
+    var bgRim = new DropShadowShader();
     var dadRim = new DropShadowShader();
 
 	function onCreate(event:ScriptEvent) {
@@ -34,9 +37,13 @@ class MeloTickErect extends Song {
 		colorShaderDad.saturation = 0;
 
 		
-		bfRim.setAdjustColor(-46, -38, -25, -20);
-		bfRim.color = 0xFF3E333C;
+		bfRim.setAdjustColor(-50, -38, -25, -20);
+		bfRim.color = FlxColor.fromString("#3E333C");
 		bfRim.distance = 0;
+
+		bgRim.setAdjustColor(bfRim.baseBrightness, bfRim.baseHue, bfRim.baseContrast, bfRim.baseSaturation);
+		bgRim.color = bfRim.color;
+		bgRim.distance = bfRim.distance;
 		
 		dadRim.setAdjustColor(bfRim.baseBrightness, bfRim.baseHue, bfRim.baseContrast, bfRim.baseSaturation);
 		dadRim.color = bfRim.color;
@@ -53,13 +60,47 @@ class MeloTickErect extends Song {
 	var addedShaders:Bool = false;
 	var addedDadShader:Bool = false;
 	var addedBoyShader:Bool = false;
+	var addedBGShader:Bool = false;
 
 	function onUpdate(event:UpdateScriptEvent) 
 	{
-		addedShaders = addedDadShader && addedBoyShader;
+		addedShaders = addedDadShader && addedBoyShader && addedBGShader;
 
 		if (PlayState.instance.currentStage != null && !addedShaders)
 		{
+			if (PlayState.instance.currentStage.getNamedProp('white') != null && !addedBGShader)
+			{
+				var white = PlayState.instance.currentStage.getNamedProp('white');
+
+				var wallOverlay = new StageProp();
+				wallOverlay.makeSolidColor(white.width, white.height, FlxColor.fromString('#151219'));
+				wallOverlay.x = white.x;
+				wallOverlay.y = white.y;
+				wallOverlay.zIndex = (white?.zIndex ?? 2) + 1;
+				wallOverlay.scrollFactor = white.scrollFactor;
+				// wallOverlay.shader = bgRim;
+
+				var floorOverlay = new StageProp();
+				floorOverlay.makeSolidColor(wallOverlay.width, wallOverlay.height / 2, FlxColor.fromString('#453660ff'));
+				floorOverlay.x = wallOverlay.x;
+				floorOverlay.y = wallOverlay.y + floorOverlay.height / 1.05;
+				floorOverlay.zIndex = wallOverlay.zIndex + 1;
+				floorOverlay.scrollFactor = wallOverlay.scrollFactor;
+				floorOverlay.shader = bgRim;
+
+				PlayState.instance.currentStage.addProp(wallOverlay);
+				// PlayState.instance.currentStage.addProp(floorOverlay);
+				PlayState.instance.currentStage.refresh();
+
+				addedBGShader = true;
+				// white.shader = bgRim;
+				// bgRim.attachedSprite = white;
+			}
+			else
+			{
+				addedBGShader = true;
+			}
+
 			if (PlayState.instance.currentStage.getDad() != null && !addedDadShader)
 			{
 				addedDadShader = true;
