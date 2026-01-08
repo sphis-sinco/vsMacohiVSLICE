@@ -1,0 +1,86 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.PlayState;
+
+class MeloTickErect extends Song {
+	public function new() {
+		super('melo-tick', {
+			variation: 'erect'
+		});
+	}
+
+	var colorShaderBf:AdjustColorShader;
+	var colorShaderDad:AdjustColorShader;
+
+    var bfRim = new DropShadowShader();
+    var dadRim = new DropShadowShader();
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate();
+
+		colorShaderBf = new AdjustColorShader();
+		colorShaderDad = new AdjustColorShader();
+
+		colorShaderBf.brightness = -23;
+		colorShaderBf.hue = 12;
+		colorShaderBf.contrast = 7;
+		colorShaderBf.saturation = 0;
+
+		colorShaderDad.brightness = -33;
+		colorShaderDad.hue = -32;
+		colorShaderDad.contrast = -23;
+		colorShaderDad.saturation = 0;
+
+		
+		bfRim.setAdjustColor(-46, -38, -25, -20);
+		bfRim.color = 0xFF3E333C;
+		bfRim.distance = 0;
+		
+		dadRim.setAdjustColor(bfRim.baseBrightness, bfRim.baseHue, bfRim.baseContrast, bfRim.baseSaturation);
+		dadRim.color = bfRim.color;
+		dadRim.distance = bfRim.distance;
+        dadRim.loadAltMask(Paths.image('characters/macohi-rim'));
+        dadRim.maskThreshold = 1;
+        dadRim.useAltMask = true;
+
+		addedShaders = false;
+		addedDadShader = false;
+		addedBoyShader = false;
+	}
+
+	var addedShaders:Bool = false;
+	var addedDadShader:Bool = false;
+	var addedBoyShader:Bool = false;
+
+	function onUpdate(event:UpdateScriptEvent) 
+	{
+		addedShaders = addedDadShader && addedBoyShader;
+
+		if (PlayState.instance.currentStage != null && !addedShaders)
+		{
+			if (PlayState.instance.currentStage.getDad() != null && !addedDadShader)
+			{
+				addedDadShader = true;
+				PlayState.instance.currentStage.getDad().shader = dadRim;
+				dadRim.attachedSprite = PlayState.instance.currentStage.getDad();
+			}
+			else
+			{
+				addedDadShader = true;
+			}
+
+			if (PlayState.instance.currentStage.getBoyfriend() != null && !addedBoyShader)
+			{
+				addedBoyShader = true;
+				PlayState.instance.currentStage.getBoyfriend().shader = bfRim;
+				bfRim.attachedSprite = PlayState.instance.currentStage.getBoyfriend();
+			}
+			else
+			{
+				addedBoyShader = true;
+			}
+		}
+	}
+}
