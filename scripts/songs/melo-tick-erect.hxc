@@ -4,6 +4,8 @@ import funkin.play.PlayState;
 import funkin.play.stage.StageProp;
 import flixel.util.FlxColor;
 
+using StringTools;
+
 class MeloTickErect extends Song {
 	public function new() {
 		super('melo-tick', {
