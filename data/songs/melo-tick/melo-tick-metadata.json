@@ -32,7 +32,7 @@
                 "bf"
             ]
         },
-        "stage": "mainStage",
+        "stage": "void",
         "noteStyle": "funkin",
         "ratings": {
             "easy": 4,

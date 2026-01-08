@@ -1,42 +1,90 @@
 {
-  "props": [],
-  "cameraZoom": 1.1,
-  "version": "1.0.0",
-  "characters": {
-    "bf": {
-      "zIndex": 300,
-      "position": [
-        0,
-        0
-      ],
-      "cameraOffsets": [
-        0,
-        0
-      ]
+    "version": "1.0.2",
+    "name": "Void",
+    "props": [
+        {
+            "alpha": 1,
+            "angle": 0,
+            "animType": "sparrow",
+            "animations": [],
+            "assetPath": "#000000",
+            "atlasSettings": null,
+            "blend": "",
+            "color": "#FFFFFF",
+            "danceEvery": 0,
+            "flipX": false,
+            "flipY": false,
+            "isPixel": true,
+            "name": "white",
+            "position": [
+                -2410,
+                -2810
+            ],
+            "scale": 6000,
+            "scroll": [
+                1,
+                1
+            ],
+            "startingAnimation": "",
+            "zIndex": 2
+        }
+    ],
+    "characters": {
+        "bf": {
+            "alpha": 1,
+            "angle": 0,
+            "cameraOffsets": [
+                0,
+                0
+            ],
+            "position": [
+                751,
+                42
+            ],
+            "scale": 1,
+            "scroll": [
+                1,
+                1
+            ],
+            "zIndex": 300
+        },
+        "dad": {
+            "alpha": 1,
+            "angle": 0,
+            "cameraOffsets": [
+                0,
+                -90
+            ],
+            "position": [
+                0,
+                0
+            ],
+            "scale": 1,
+            "scroll": [
+                1,
+                1
+            ],
+            "zIndex": 200
+        },
+        "gf": {
+            "alpha": 1,
+            "angle": 0,
+            "cameraOffsets": [
+                0,
+                0
+            ],
+            "position": [
+                326,
+                -92
+            ],
+            "scale": 1,
+            "scroll": [
+                1,
+                1
+            ],
+            "zIndex": 100
+        }
     },
-    "dad": {
-      "zIndex": 200,
-      "position": [
-        0,
-        0
-      ],
-      "cameraOffsets": [
-        0,
-        0
-      ]
-    },
-    "gf": {
-      "zIndex": 100,
-      "cameraOffsets": [
-        0,
-        0
-      ],
-      "position": [
-        0,
-        0
-      ]
-    }
-  },
-  "name": "Void",
-  "directory": ""
+    "cameraZoom": 1,
+    "directory": "shared"
 }
