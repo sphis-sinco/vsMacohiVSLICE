@@ -37,7 +37,7 @@ class MeloTickErect extends Song {
 		colorShaderDad.saturation = 0;
 
 		
-		bfRim.setAdjustColor(-50, -38, -25, -20);
+		bfRim.setAdjustColor(-100, -40, -50, -50);
 		bfRim.color = FlxColor.fromString("#3E333C");
 		bfRim.distance = 0;
 
