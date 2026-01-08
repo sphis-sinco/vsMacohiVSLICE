@@ -1,0 +1,42 @@
+{
+  "props": [],
+  "cameraZoom": 1.1,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [
+        0,
+        0
+      ],
+      "cameraOffsets": [
+        0,
+        0
+      ]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [
+        0,
+        0
+      ],
+      "cameraOffsets": [
+        0,
+        0
+      ]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [
+        0,
+        0
+      ],
+      "position": [
+        0,
+        0
+      ]
+    }
+  },
+  "name": "Void",
+  "directory": ""
+}
