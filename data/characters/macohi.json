@@ -4,7 +4,7 @@
 		0,
 		0
 	],
-	"renderType": "sparrow",
+	"renderType": "multisparrow",
 	"danceEvery": 1,
 	"applyStageMatrix": false,
 	"scale": 1,
