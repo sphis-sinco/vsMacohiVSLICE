@@ -17,13 +17,13 @@
             "isPixel": true,
             "name": "white",
             "position": [
-                0,
-                0
+                -3000,
+                -3000
             ],
             "scale": 6000,
             "scroll": [
-                0,
-                0
+                1,
+                1
             ],
             "startingAnimation": "",
             "zIndex": 2
