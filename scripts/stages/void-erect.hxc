@@ -1,0 +1,48 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.sound.FlxSound;
+import funkin.Conductor;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.graphics.shaders.DropShadowShader;
+import flixel.util.FlxColor;
+import funkin.play.character.CharacterType;
+
+class VoidErectionStage extends Stage {
+	function new() {
+		super('void-erect');
+	}
+
+	var bfRim = new DropShadowShader();
+	var dadRim = new DropShadowShader();
+
+	function buildStage() {
+		super.buildStage();
+
+		bfRim.setAdjustColor(-100, -40, -50, -50);
+		bfRim.color = FlxColor.fromString("#3E333C");
+		bfRim.distance = 0;
+
+		dadRim.setAdjustColor(-100, -40, -50, -50);
+		dadRim.color = bfRim.color;
+		dadRim.distance = bfRim.distance;
+	}
+
+	/**
+	 * Apply the shader to the character as it is added.
+	 */
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+		switch (charType) {
+			case CharacterType.BF:
+				character.shader = bfRim;
+			case CharacterType.DAD:
+				character.shader = dadRim;
+		}
+	}
+}
