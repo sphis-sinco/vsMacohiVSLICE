@@ -8,18 +8,18 @@ using StringTools;
 
 class MeloTickErect extends Song {
 	public function new() {
-		super('melo-tickss', {
+		super('melo-tick', {
 			variation: 'erect'
 		});
 	}
 
+    var bfRim = new DropShadowShader();
     var dadRim = new DropShadowShader();
     var dadAltRim = new DropShadowShader();
 
 	function onCreate(event:ScriptEvent) {
 		super.onCreate();
 		
-		var bfRim = new DropShadowShader();
 		bfRim.setAdjustColor(-100, -40, -50, -50);
 		bfRim.color = FlxColor.fromString("#3E333C");
 		bfRim.distance = 0;
@@ -40,10 +40,12 @@ class MeloTickErect extends Song {
 
 		addedShaders = false;
 		addedDadShader = false;
+		addedBoyShader = false;
 	}
 
 	var addedShaders:Bool = false;
 	var addedDadShader:Bool = false;
+	var addedBoyShader:Bool = false;
 
 	var dadCurRim:Int = -1;
 
@@ -103,7 +105,7 @@ class MeloTickErect extends Song {
 
 	function onUpdate(event:UpdateScriptEvent) 
 	{
-		addedShaders = addedDadShader;
+		addedShaders = addedDadShader && addedBoyShader;
 
 		dadShader();
 
@@ -117,6 +119,17 @@ class MeloTickErect extends Song {
 			else
 			{
 				addedDadShader = true;
+			}
+
+			if (PlayState.instance.currentStage.getBoyfriend() != null && !addedBoyShader)
+			{
+				addedBoyShader = true;
+				PlayState.instance.currentStage.getBoyfriend().shader = bfRim;
+				bfRim.attachedSprite = PlayState.instance.currentStage.getBoyfriend();
+			}
+			else
+			{
+				addedBoyShader = true;
 			}
 		}
 	}
