@@ -5,10 +5,16 @@ import funkin.play.PlayState;
 import flixel.FlxG;
 import funkin.FunkinMemory;
 
-class Macohi extends MultiSparrowCharacter {
-	function new() {
+using StringTools;
+
+class Macohi extends MultiSparrowCharacter
+{
+	function new()
+	{
 		super('macohi');
 	}
+
+	var irritated:Bool = false;
 
 	function onNoteHit(event:HitNoteScriptEvent)
 	{
@@ -17,6 +23,7 @@ class Macohi extends MultiSparrowCharacter {
 			// onNoteHit event was cancelled by the gameplay module.
 			return;
 		}
+
 		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
 			switch (event.note.kind) 
 			{
@@ -25,12 +32,40 @@ class Macohi extends MultiSparrowCharacter {
 					this.playSingAnimation(event.note.noteData.getDirection(), false, 'beepbox');
 					return;
 				default:
+					if (irritated)
+					{
+						holdTimer = 0;
+						this.playSingAnimation(event.note.noteData.getDirection(), false, 'irritated');
+						return;
+					}
+
 					super.onNoteHit(event);
 			}
 	}
 
+	function onSongEvent(event:SongEventScriptEvent)
+	{
+		if (event.eventData.eventKind == "MacohiEvent")
+		{
+			var v = event.eventData.value;
+
+			if (v == null) return;
+
+			if (v.set_irritated != null)
+			{
+				irritated = v.set_irritated;
+
+				if (irritated)
+					idleSuffix = '-irritated';
+				else
+					idleSuffix = '';
+			}
+		}
+	}
+
 	override function destroy():Void 
 	{
+		irritated = false;
 		super.destroy();
 	}
 }

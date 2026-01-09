@@ -40,20 +40,20 @@
 			"flipY": false,
 			"offsets": [
 				0,
-				-5
+				0
 			],
 			"frameRate": 24,
 			"prefix": "macohi animation idle",
 			"animType": "framelabel",
 			"flipX": false,
-			"looped": false,
+			"looped": true,
 			"name": "idle"
 		},
 		{
 			"flipY": false,
 			"offsets": [
 				32,
-				-4
+				1
 			],
 			"frameRate": 24,
 			"prefix": "macohi animation left0",
@@ -66,7 +66,7 @@
 			"flipY": false,
 			"offsets": [
 				40,
-				-30
+				-25
 			],
 			"frameRate": 24,
 			"prefix": "macohi animation down0",
@@ -79,7 +79,7 @@
 			"flipY": false,
 			"offsets": [
 				-20,
-				75
+				70
 			],
 			"frameRate": 24,
 			"prefix": "macohi animation up0",
@@ -92,7 +92,7 @@
 			"flipY": false,
 			"offsets": [
 				-20,
-				30
+				25
 			],
 			"frameRate": 24,
 			"prefix": "macohi animation right0",
@@ -104,7 +104,7 @@
 		{
 			"offsets": [
 				12,
-				-54
+				-49
 			],
 			"prefix": "macohi animation left beepbox0",
 			"animType": "framelabel",
@@ -118,7 +118,7 @@
 		{
 			"offsets": [
 				-5,
-				-60
+				-55
 			],
 			"prefix": "macohi animation down beepbox0",
 			"animType": "framelabel",
@@ -132,7 +132,7 @@
 		{
 			"offsets": [
 				-30,
-				5
+				0
 			],
 			"prefix": "macohi animation up beepbox0",
 			"animType": "framelabel",
@@ -146,13 +146,85 @@
 		{
 			"offsets": [
 				-10,
-				-10
+				-5
 			],
 			"prefix": "macohi animation right beepbox0",
 			"animType": "framelabel",
 			"flipX": false,
 			"looped": false,
 			"name": "singRIGHT-beepbox",
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/macohi-beepbox"
+		},
+		
+		
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "macohi animation idle",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": true,
+			"name": "idle",
+			"assetPath": "characters/macohi"
+		},
+		{
+			"offsets": [
+				12,
+				-49
+			],
+			"prefix": "macohi animation left beepbox0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT-irritated",
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/macohi-beepbox"
+		},
+		{
+			"offsets": [
+				-5,
+				-55
+			],
+			"prefix": "macohi animation down beepbox0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN-irritated",
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/macohi-beepbox"
+		},
+		{
+			"offsets": [
+				-30,
+				0
+			],
+			"prefix": "macohi animation up beepbox0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP-irritated",
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/macohi-beepbox"
+		},
+		{
+			"offsets": [
+				-10,
+				-5
+			],
+			"prefix": "macohi animation right beepbox0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT-irritated",
 			"flipY": false,
 			"frameRate": 24,
 			"assetPath": "characters/macohi-beepbox"
