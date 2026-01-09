@@ -17,16 +17,16 @@ class Macohi extends MultiSparrowCharacter {
 			// onNoteHit event was cancelled by the gameplay module.
 			return;
 		}
-
-		switch (event.note.kind) 
-		{
-			case "MacohiBeepbox":
-				holdTimer = 0;
-				this.playSingAnimation(event.note.noteData.getDirection(), false, 'beepbox');
-				return;
-			default:
-				super.onNoteHit(event);
-		}
+		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
+			switch (event.note.kind) 
+			{
+				case "MacohiBeepbox":
+					holdTimer = 0;
+					this.playSingAnimation(event.note.noteData.getDirection(), false, 'beepbox');
+					return;
+				default:
+					super.onNoteHit(event);
+			}
 	}
 
 	override function destroy():Void 
