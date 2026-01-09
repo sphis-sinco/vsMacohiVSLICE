@@ -14,7 +14,6 @@ class MeloTickErect extends Song {
 	}
 
     var bfRim = new DropShadowShader();
-    var bgRim = new DropShadowShader();
     var dadRim = new DropShadowShader();
     var dadAltRim = new DropShadowShader();
 
@@ -25,10 +24,6 @@ class MeloTickErect extends Song {
 		bfRim.color = FlxColor.fromString("#3E333C");
 		bfRim.distance = 0;
 
-		bgRim.setAdjustColor(bfRim.baseBrightness, bfRim.baseHue, bfRim.baseContrast, bfRim.baseSaturation);
-		bgRim.color = bfRim.color;
-		bgRim.distance = bfRim.distance;
-		
 		dadRim.setAdjustColor(bfRim.baseBrightness, bfRim.baseHue, bfRim.baseContrast, bfRim.baseSaturation);
 		dadRim.color = bfRim.color;
 		dadRim.distance = bfRim.distance;
@@ -51,7 +46,6 @@ class MeloTickErect extends Song {
 	var addedShaders:Bool = false;
 	var addedDadShader:Bool = false;
 	var addedBoyShader:Bool = false;
-	var addedBGShader:Bool = false;
 
 	var dadCurRim:Int = -1;
 
@@ -111,33 +105,12 @@ class MeloTickErect extends Song {
 
 	function onUpdate(event:UpdateScriptEvent) 
 	{
-		addedShaders = addedDadShader && addedBoyShader && addedBGShader;
+		addedShaders = addedDadShader && addedBoyShader;
 
 		dadShader();
 
 		if (PlayState.instance.currentStage != null && !addedShaders)
 		{
-			if (PlayState.instance.currentStage.getNamedProp('white') != null && !addedBGShader)
-			{
-				var white = PlayState.instance.currentStage.getNamedProp('white');
-
-				var wallOverlay = new StageProp();
-				wallOverlay.makeSolidColor(white.width, white.height, FlxColor.fromString('#151219'));
-				wallOverlay.x = white.x;
-				wallOverlay.y = white.y;
-				wallOverlay.zIndex = (white?.zIndex ?? 2) + 1;
-				wallOverlay.scrollFactor = white.scrollFactor;
-
-				PlayState.instance.currentStage.addProp(wallOverlay);
-				PlayState.instance.currentStage.refresh();
-
-				addedBGShader = true;
-			}
-			else
-			{
-				addedBGShader = true;
-			}
-
 			if (PlayState.instance.currentStage.getDad() != null && !addedDadShader)
 			{
 				addedDadShader = true;
