@@ -70,8 +70,13 @@ class MeloTickErect extends Song {
 		if (PlayState.instance?.currentStage?.getDad() != null && addedDadShader)
 		{
 			var dad = PlayState.instance.currentStage.getDad();
+
+			if (dad?.animation == null) return;
+			if (dad?.animation?.name == null) return;
+			if (dadRim == null) return;
+			if (dadAltRim == null) return;
 			
-			if (dadCurRim != 1 && dad.animation.name.endsWith('-beepbox'))
+			if (dadCurRim != 1 && dad?.animation?.name.endsWith('-beepbox'))
 			{
 				dadCurRim = 1;
 				dad.shader = dadAltRim;
@@ -88,6 +93,20 @@ class MeloTickErect extends Song {
 
 			PlayState.instance.currentStage.refresh();
 		}
+	}
+
+	function onBeatHit()
+	{
+		if (PlayState.instance?.currentStage?.getDad() != null && addedDadShader)
+			dadCurRim = -1;
+		dadShader();
+	}
+
+	function onStepHit()
+	{
+		if (PlayState.instance?.currentStage?.getDad() != null && addedDadShader)
+			dadCurRim = -1;
+		dadShader();
 	}
 
 	function onUpdate(event:UpdateScriptEvent) 
