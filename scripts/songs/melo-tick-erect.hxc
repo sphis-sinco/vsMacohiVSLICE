@@ -16,6 +16,7 @@ class MeloTickErect extends Song {
     var bfRim = new DropShadowShader();
     var bgRim = new DropShadowShader();
     var dadRim = new DropShadowShader();
+    var dadAltRim = new DropShadowShader();
 
 	function onCreate(event:ScriptEvent) {
 		super.onCreate();
@@ -31,10 +32,16 @@ class MeloTickErect extends Song {
 		dadRim.setAdjustColor(bfRim.baseBrightness, bfRim.baseHue, bfRim.baseContrast, bfRim.baseSaturation);
 		dadRim.color = bfRim.color;
 		dadRim.distance = bfRim.distance;
-        dadRim.loadAltMask(Paths.image('characters/macohi-rim'));
-		dadCurRim = 0;
-        dadRim.maskThreshold = 1;
-        dadRim.useAltMask = true;
+		dadRim.loadAltMask(Paths.image('characters/macohi-rim'));
+		dadRim.maskThreshold = 1;
+		dadRim.useAltMask = true;
+
+		dadAltRim.setAdjustColor(dadRim.baseBrightness, dadRim.baseHue, dadRim.baseContrast, dadRim.baseSaturation);
+		dadAltRim.color = dadRim.color;
+		dadAltRim.distance = 0;
+		dadAltRim.loadAltMask(Paths.image('characters/macohi-beepbox-rim'));
+		dadAltRim.maskThreshold = 1;
+		dadAltRim.useAltMask = true;
 
 		addedShaders = false;
 		addedDadShader = false;
@@ -46,27 +53,48 @@ class MeloTickErect extends Song {
 	var addedBoyShader:Bool = false;
 	var addedBGShader:Bool = false;
 
-	var dadCurRim:Int = 0;
+	var dadCurRim:Int = -1;
+
+	function onNoteHit(event:HitNoteScriptEvent)
+	{
+
+		super.onNoteHit(event);
+
+		if (PlayState.instance?.currentStage?.getDad() != null && addedDadShader)
+			dadCurRim = -1;
+		dadShader();
+	}
+
+	function dadShader()
+	{
+		if (PlayState.instance?.currentStage?.getDad() != null && addedDadShader)
+		{
+			var dad = PlayState.instance.currentStage.getDad();
+			
+			if (dadCurRim != 1 && dad.animation.name.endsWith('-beepbox'))
+			{
+				dadCurRim = 1;
+				dad.shader = dadAltRim;
+				dadAltRim.attachedSprite = dad;
+
+			}
+			else if (dadCurRim != 0)
+			{
+				dadCurRim = 0;
+				dad.shader = dadRim;
+				dadRim.attachedSprite = dad;
+
+			}
+
+			PlayState.instance.currentStage.refresh();
+		}
+	}
 
 	function onUpdate(event:UpdateScriptEvent) 
 	{
 		addedShaders = addedDadShader && addedBoyShader && addedBGShader;
 
-		if (PlayState.instance?.currentStage?.getDad() != null && addedDadShader)
-		{
-			var dad = PlayState.instance.currentStage.getDad();
-			
-			if (dad.animation.name.contains('-beepbox') && dadCurRim == 0 && dadCurRim != 1)
-			{
-				dadCurRim = 1;
-				dadRim.loadAltMask(Paths.image('characters/macohi-beepbox-rim'));
-			}
-			else if (dadCurRim != 0)
-			{
-				dadCurRim = 0;
-				dadRim.loadAltMask(Paths.image('characters/macohi-rim'));
-			}
-		}
+		dadShader();
 
 		if (PlayState.instance.currentStage != null && !addedShaders)
 		{
@@ -94,8 +122,7 @@ class MeloTickErect extends Song {
 			if (PlayState.instance.currentStage.getDad() != null && !addedDadShader)
 			{
 				addedDadShader = true;
-				PlayState.instance.currentStage.getDad().shader = dadRim;
-				dadRim.attachedSprite = PlayState.instance.currentStage.getDad();
+				dadShader();
 			}
 			else
 			{
