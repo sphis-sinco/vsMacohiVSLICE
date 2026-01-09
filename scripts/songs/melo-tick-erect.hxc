@@ -32,6 +32,7 @@ class MeloTickErect extends Song {
 		dadRim.color = bfRim.color;
 		dadRim.distance = bfRim.distance;
         dadRim.loadAltMask(Paths.image('characters/macohi-rim'));
+		dadCurRim = 0;
         dadRim.maskThreshold = 1;
         dadRim.useAltMask = true;
 
@@ -45,6 +46,8 @@ class MeloTickErect extends Song {
 	var addedBoyShader:Bool = false;
 	var addedBGShader:Bool = false;
 
+	var dadCurRim:Int = 0;
+
 	function onUpdate(event:UpdateScriptEvent) 
 	{
 		addedShaders = addedDadShader && addedBoyShader && addedBGShader;
@@ -53,10 +56,16 @@ class MeloTickErect extends Song {
 		{
 			var dad = PlayState.instance.currentStage.getDad();
 			
-			if (dad.animation.name.contains('-beepbox'))
+			if (dad.animation.name.contains('-beepbox') && dadCurRim == 0)
+			{
+				dadCurRim = 1;
 				dadRim.loadAltMask(Paths.image('characters/macohi-beepbox-rim'));
-			else
+			}
+			else if (dadCurRim != 0)
+			{
+				dadCurRim = 0;
 				dadRim.loadAltMask(Paths.image('characters/macohi-rim'));
+			}
 		}
 
 		if (PlayState.instance.currentStage != null && !addedShaders)
