@@ -56,7 +56,7 @@ class MeloTickErect extends Song {
 		{
 			var dad = PlayState.instance.currentStage.getDad();
 			
-			if (dad.animation.name.contains('-beepbox') && dadCurRim == 0)
+			if (dad.animation.name.contains('-beepbox') && dadCurRim == 0 && dadCurRim != 1)
 			{
 				dadCurRim = 1;
 				dadRim.loadAltMask(Paths.image('characters/macohi-beepbox-rim'));
