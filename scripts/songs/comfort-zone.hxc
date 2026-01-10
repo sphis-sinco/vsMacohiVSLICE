@@ -1,0 +1,46 @@
+import funkin.play.song.Song;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.PlayState;
+import funkin.play.stage.StageProp;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
+import flixel.util.FlxTween;
+import funkin.graphics.FunkinSprite;
+import funkin.Conductor;
+
+using StringTools;
+
+class ComfortZone extends Song {
+	public function new() {
+		super('comfort-zone', {
+			variation: 'erect'
+		});
+	}
+
+
+	public override function onCountdownStart(event:CountdownScriptEvent):Void
+	{
+		super.onCountdownStart(event);
+
+		
+
+		// trace('Adding black background behind cutscene over UI');
+		var bgSprite = new FunkinSprite(0, 0);
+		bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+		bgSprite.cameras = [PlayState.instance.camCutscene]; // Show over the HUD but below the video.
+		// this
+		bgSprite.zIndex = -10000;
+		PlayState.instance.add(bgSprite);
+		PlayState.instance.refresh();
+
+		new FlxTimer().start(6 - Conductor.instance.songPosition, function(t){
+			FlxTween.tween(bgSprite, {alpha: 1}, 4, {
+				onComplete: t -> {
+					PlayState.instance.remove(bgSprite);
+					PlayState.instance.refresh();
+				}
+			});
+		});
+	}
+
+}
