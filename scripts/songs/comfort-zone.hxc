@@ -28,7 +28,7 @@ class ComfortZone extends Song {
 
 		PlayState.instance.tweenCameraToPosition(0, -10000, 0);
 		if (!PlayStatePlaylist.isStoryMode) {
-			// playedCutscene = true;
+			playedCutscene = true;
 		}
 
 		if (!playedCutscene) {
