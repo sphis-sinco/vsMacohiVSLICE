@@ -60,12 +60,13 @@ class MeloTickDefault extends Song {
 
     cutsceneSprite = FunkinSprite.createSparrow(0,0, 'cutscenes/melo-tick');
     cutsceneSprite.cameras = [PlayState.instance.camCutscene];
+    cutsceneSprite.animation.addByPrefix('cutscene', '_cutscene');
+    cutsceneSprite.setPosition(-140.05, -116.65);
+    cutsceneSprite.animation.play('cutscene');
 
-    var cutscene = Json.parse(Assets.getText(Paths.json('cutscenes/melo-tick')));
-    trace(cutscene);
-    FlxAnimationUtil.addAtlasAnimations(cutsceneSprite, cutscene.animations);
-    cutsceneSprite.setPosition(cutscene.position.x, cutscene.position.y);
-    cutsceneSprite.animation.play(cutscene.startAnimation);
+    cutsceneSprite.animation.onFrameChange.add(function(animName:String, frameNumber:Int, frameIndex:Int) {
+      trace(frameNumber);
+    });
 
 		PlayState.instance.add(cutsceneSprite);
 
