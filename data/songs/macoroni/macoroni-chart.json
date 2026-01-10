@@ -6,6 +6,22 @@
     "normal": 2.5
   },
   "events": [
+    
+    {
+      "t": 0,
+      "e": "MacohiEvent",
+      "v": {
+        "set_irritated": false
+      }
+    },
+    {
+      "t": 0,
+      "e": "SetHealthIcon",
+      "v": {
+        "char": 1,
+        "id": "macohi"
+      }
+    },
     {
       "t": 0,
       "e": "FocusCamera",
