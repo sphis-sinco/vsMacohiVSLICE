@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
   "name": "Boyfriend (Macohi)",
-  "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/bf",
+  "renderType": "multisparrow",
+  "assetPath": "characters/BOYFRIEND",
   "flipX": true,
   "offsets": [17, 14],
   "cameraOffsets": [-18, 36],
