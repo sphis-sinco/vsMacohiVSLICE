@@ -11,7 +11,7 @@
 	"name": "Macohi (Comfort Zone)",
 	"cameraOffsets": [
 		0,
-		0
+		-300
 	],
 	"flipX": true,
 	"singTime": 8,
@@ -45,7 +45,7 @@
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation idle0",
 			"name": "idle",
-			"looped": true,
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		},
@@ -58,7 +58,7 @@
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation left0",
 			"name": "singLEFT",
-			"looped": true,
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		},
@@ -70,8 +70,8 @@
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation left miss0",
-			"name": "singLEFT-miss",
-			"looped": true,
+			"name": "singLEFTmiss",
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		},
@@ -84,7 +84,7 @@
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation down0",
 			"name": "singDOWN",
-			"looped": true,
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		},
@@ -96,8 +96,8 @@
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation down miss0",
-			"name": "singDOWN-miss",
-			"looped": true,
+			"name": "singDOWNmiss",
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		},
@@ -110,7 +110,7 @@
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation up0",
 			"name": "singUP",
-			"looped": true,
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		},
@@ -122,8 +122,8 @@
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation up miss0",
-			"name": "singUP-miss",
-			"looped": true,
+			"name": "singUPmiss",
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		},
@@ -136,7 +136,7 @@
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation right0",
 			"name": "singRIGHT",
-			"looped": true,
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		},
@@ -148,8 +148,8 @@
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "macohi comfort zone animation right miss0",
-			"name": "singRIGHT-miss",
-			"looped": true,
+			"name": "singRIGHTmiss",
+			"looped": false,
 			"flipX": false,
 			"animType": "framelabel"
 		}
