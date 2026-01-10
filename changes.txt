@@ -1,1 +1,1 @@
-* Fixed bit1 storymenu title being too big (Redrew it)
+* Redrew bit1 storymenu title
