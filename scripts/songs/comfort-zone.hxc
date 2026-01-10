@@ -1,0 +1,25 @@
+import funkin.play.song.Song;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.PlayState;
+import funkin.play.stage.StageProp;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import funkin.graphics.FunkinSprite;
+import funkin.Conductor;
+
+using StringTools;
+
+class ComfortZone extends Song {
+	public function new() {
+		super('comfort-zone');
+	}
+
+
+	public override function onCountdownStart(event:CountdownScriptEvent):Void
+	{
+		super.onCountdownStart(event);
+		PlayState.instance.tweenCameraToPosition(0, -10000, 0);
+	}
+
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="macohi-comfort-zone-gameover.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="macohi comfort zone animation gameover0000" x="4" y="4" width="67" height="54"/>
+	<SubTexture name="macohi comfort zone animation gameover0001" x="79" y="4" width="64" height="53" frameX="-2" frameY="0" frameWidth="67" frameHeight="54"/>
+	<SubTexture name="macohi comfort zone animation gameover0002" x="151" y="4" width="64" height="53" frameX="0" frameY="0" frameWidth="67" frameHeight="54"/>
+	<SubTexture name="macohi comfort zone animation gameover0003" x="4" y="66" width="66" height="53" frameX="0" frameY="0" frameWidth="67" frameHeight="54"/>
+</TextureAtlas>
