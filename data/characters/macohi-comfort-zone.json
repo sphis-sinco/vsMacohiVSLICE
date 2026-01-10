@@ -36,7 +36,7 @@
 		"cacheOnLoad": false
 	},
 	"death": {
-		"cameraOffsets": [0, 0],
+		"cameraOffsets": [0, -300],
 		"cameraZoom": 1.0
 	},
 	"animations": [
