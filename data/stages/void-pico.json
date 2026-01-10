@@ -27,6 +27,48 @@
             ],
             "startingAnimation": "",
             "zIndex": 2
+        },
+        {
+            "alpha": 1,
+            "angle": 0,
+            "animType": "sparrow",
+            "animations": [
+                {
+                    "animType": null,
+                    "assetPath": null,
+                    "flipX": false,
+                    "flipY": false,
+                    "frameIndices": [],
+                    "frameRate": 24,
+                    "looped": true,
+                    "name": "idle",
+                    "offsets": [
+                        0,
+                        0
+                    ],
+                    "prefix": "bf macoroni"
+                }
+            ],
+            "assetPath": "stageprops/BF Macoroni",
+            "atlasSettings": null,
+            "blend": "",
+            "color": "#B8A5BA",
+            "danceEvery": 0,
+            "flipX": false,
+            "flipY": false,
+            "isPixel": false,
+            "name": "bf macoroni",
+            "position": [
+                155,
+                -510
+            ],
+            "scale": 0.75,
+            "scroll": [
+                1,
+                1
+            ],
+            "startingAnimation": "idle",
+            "zIndex": 10
         }
     ],
     "characters": {
@@ -74,8 +116,8 @@
                 0
             ],
             "position": [
-                326,
-                -92
+                302,
+                -84
             ],
             "scale": 1,
             "scroll": [
