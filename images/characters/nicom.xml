@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="nicom.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="nicom animation down0000" x="4" y="4" width="519" height="782" frameX="-1" frameY="-52" frameWidth="520" frameHeight="834"/>
+	<SubTexture name="nicom animation down0001" x="4" y="4" width="519" height="782" frameX="-1" frameY="-52" frameWidth="520" frameHeight="834"/>
+	<SubTexture name="nicom animation down0002" x="531" y="4" width="487" height="834" frameX="0" frameY="0" frameWidth="520" frameHeight="834"/>
+	<SubTexture name="nicom animation down0003" x="531" y="4" width="487" height="834" frameX="0" frameY="0" frameWidth="520" frameHeight="834"/>
+	<SubTexture name="nicom animation idle0000" x="1026" y="4" width="479" height="855" frameX="-55" frameY="-42" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0001" x="1026" y="4" width="479" height="855" frameX="-55" frameY="-42" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0002" x="1513" y="4" width="461" height="874" frameX="-37" frameY="-23" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0003" x="1513" y="4" width="461" height="874" frameX="-37" frameY="-23" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0004" x="1982" y="4" width="455" height="887" frameX="-16" frameY="-10" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0005" x="1982" y="4" width="455" height="887" frameX="-16" frameY="-10" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0006" x="2445" y="4" width="451" height="895" frameX="-4" frameY="-2" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0007" x="2445" y="4" width="451" height="895" frameX="-4" frameY="-2" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0008" x="2904" y="4" width="449" height="897" frameX="0" frameY="0" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0009" x="2904" y="4" width="449" height="897" frameX="0" frameY="0" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0010" x="2904" y="4" width="449" height="897" frameX="0" frameY="0" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0011" x="2904" y="4" width="449" height="897" frameX="0" frameY="0" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0012" x="2904" y="4" width="449" height="897" frameX="0" frameY="0" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation idle0013" x="2904" y="4" width="449" height="897" frameX="0" frameY="0" frameWidth="534" frameHeight="897"/>
+	<SubTexture name="nicom animation left0000" x="3361" y="4" width="466" height="862" frameX="-10" frameY="-15" frameWidth="476" frameHeight="877"/>
+	<SubTexture name="nicom animation left0001" x="3361" y="4" width="466" height="862" frameX="-10" frameY="-15" frameWidth="476" frameHeight="877"/>
+	<SubTexture name="nicom animation left0002" x="4" y="909" width="457" height="877" frameX="0" frameY="0" frameWidth="476" frameHeight="877"/>
+	<SubTexture name="nicom animation left0003" x="4" y="909" width="457" height="877" frameX="0" frameY="0" frameWidth="476" frameHeight="877"/>
+	<SubTexture name="nicom animation right0000" x="469" y="909" width="403" height="925" frameX="-2" frameY="0" frameWidth="426" frameHeight="925"/>
+	<SubTexture name="nicom animation right0001" x="469" y="909" width="403" height="925" frameX="-2" frameY="0" frameWidth="426" frameHeight="925"/>
+	<SubTexture name="nicom animation right0002" x="880" y="909" width="426" height="916" frameX="0" frameY="-9" frameWidth="426" frameHeight="925"/>
+	<SubTexture name="nicom animation right0003" x="880" y="909" width="426" height="916" frameX="0" frameY="-9" frameWidth="426" frameHeight="925"/>
+	<SubTexture name="nicom animation up0000" x="1314" y="909" width="422" height="938"/>
+	<SubTexture name="nicom animation up0001" x="1314" y="909" width="422" height="938"/>
+	<SubTexture name="nicom animation up0002" x="1744" y="909" width="422" height="921" frameX="0" frameY="-17" frameWidth="422" frameHeight="938"/>
+	<SubTexture name="nicom animation up0003" x="1744" y="909" width="422" height="921" frameX="0" frameY="-17" frameWidth="422" frameHeight="938"/>
+</TextureAtlas>

@@ -1,0 +1,161 @@
+import funkin.play.song.Song;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+import funkin.play.stage.StageProp;
+import funkin.Conductor;
+import funkin.play.Countdown;
+import funkin.play.CountdownStep;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
+import funkin.graphics.FunkinSprite;
+import funkin.util.assets.FlxAnimationUtil;
+import funkin.Paths;
+import flixel.util.FlxTimer;
+import haxe.Json;
+
+using StringTools;
+
+class Nicom_DefaultVariation_SongScript extends Song {
+	var playedCutscene:Bool;
+	var bgSprite:FunkinSprite;
+	var cutsceneSprite:FunkinSprite;
+
+	public function new() {
+		super('nicom');
+		playedCutscene = false;
+	}
+
+	override public function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+
+		if (true)// !PlayStatePlaylist.isStoryMode) 
+		{
+			playedCutscene = true;
+		}
+
+		if (!playedCutscene) {
+			trace('Pausing countdown to play in game cutscene');
+
+			playedCutscene = true;
+
+			event.cancel(); // CANCEL THE COUNTDOWN!
+
+			PlayState.instance.camHUD.visible = false;
+			introCutscene();
+			return;
+		} else {
+			trace('played cutscene');
+		}
+
+		if (PlayState.instance.startTimestamp > 0) return;
+
+		Countdown.countdownStep = CountdownStep.AFTER;
+		Conductor.instance.update(PlayState.instance.startTimestamp);
+
+		PlayState.instance.isInCountdown = false;
+		PlayState.instance.startSong();
+
+		var countdownStep = CountdownStep.THREE;
+
+		new FlxTimer().start(Conductor.instance.beatLengthMs / 1000, function(tmr:FlxTimer) {
+			if (PlayState.instance == null)
+			{
+				tmr.cancel();
+				return;
+			}
+
+			countdownStep = Countdown.decrement(countdownStep);
+			Countdown.showCountdownGraphic(countdownStep);
+		}, 5);
+	}
+
+	function introCutscene() {
+		PlayState.instance.togglePauseButton();
+		PlayState.instance.isInCutscene = true;
+		PlayState.instance.mayPauseGame = false;
+
+		// trace('Adding black background behind cutscene over UI');
+		bgSprite = new FunkinSprite(0, 0);
+		bgSprite.makeSolidColor(2000, 2500, 0xFFFFFFFF);
+		bgSprite.cameras = [PlayState.instance.camCutscene]; // Show over the HUD but below the video.
+		// this
+		bgSprite.zIndex = -10000;
+		PlayState.instance.add(bgSprite);
+
+		cutsceneSprite = FunkinSprite.createSparrow(0, 0, 'cutscenes/comfort-zone');
+		cutsceneSprite.cameras = [PlayState.instance.camCutscene];
+		cutsceneSprite.animation.addByPrefix('c', 'cutscene', 24, false);
+		cutsceneSprite.scale.set(2,2);
+		cutsceneSprite.updateHitbox();
+		cutsceneSprite.setPosition(0,0);
+		cutsceneSprite.animation.play('c');
+		cutsceneSprite.screenCenter();
+
+		var portalSfx:FunkinSound = FunkinSound.load(Paths.sound("portal"), 1.0, true);
+		portalSfx.pause();
+		var breathingSfx:FunkinSound = FunkinSound.load(Paths.sound("breathing"), 1.0, true);
+		breathingSfx.pause();
+
+		cutsceneSprite.frame = 86;
+		cutsceneSprite.animation.onFrameChange.add(function(animName:String, frameNumber:Int, frameIndex:Int) {
+			// trace(frameNumber);
+
+			switch (frameNumber) {
+				case 1:
+					breathingSfx.play(true);
+				case 87:
+					portalSfx.pause();
+					portalSfx.play(true);
+				case 97:
+					portalSfx.pause();
+					FunkinSound.playOnce(Paths.sound('pop'), 0.5);
+				case 140:
+					bgSprite.visible = false;
+					PlayState.instance.remove(bgSprite);
+					PlayState.instance.refresh();
+					breathingSfx.play(false);
+				case 168:
+					FlxTween.tween(cutsceneSprite, {alpha: 0}, 1);
+			}
+		});
+
+		cutsceneSprite.animation.onFinish.add(function() {
+			breathingSfx.pause();
+			// PlayState.instance.remove(bgSprite);
+			PlayState.instance.remove(cutsceneSprite);
+			PlayState.instance.refresh();
+
+			PlayState.instance.startCountdown();
+			// cutsceneMusic.stop(); // stop the music!!!!!!
+
+			PlayState.instance.togglePauseButton(true);
+			PlayState.instance.isInCutscene = false;
+			PlayState.instance.mayPauseGame = true;
+		});
+
+		cutsceneSprite.zIndex = 100000;
+		PlayState.instance.add(cutsceneSprite);
+
+		PlayState.instance.refresh();
+	}
+
+	/**
+	 * Don't replay the cutscene between restarts.
+	 */
+	function onSongRetry(event:ScriptEvent) {
+		super.onSongRetry(event);
+
+		playedCutscene = true;
+	}
+
+	/**
+	 * Replay the cutscene after leaving the song.
+	 */
+	function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+
+		playedCutscene = false;
+	}
+}
