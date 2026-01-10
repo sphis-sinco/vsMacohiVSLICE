@@ -17,7 +17,7 @@ import funkin.Preferences;
 
 class Boyfriend_Macohi_CharacterScript extends MultiSparrowCharacter
 {
-	var irritated:Bool = false;
+	var annoyed:Bool = false;
   function new()
   {
     super('bf-macohi');
@@ -41,13 +41,13 @@ class Boyfriend_Macohi_CharacterScript extends MultiSparrowCharacter
 			{
 				case "MacohiIrritated":
 					holdTimer = 0;
-					this.playSingAnimation(event.note.noteData.getDirection(), false, 'irritated');
+					this.playSingAnimation(event.note.noteData.getDirection(), false, 'annoyed');
 					return;
 				default:
-					if (irritated)
+					if (annoyed)
 					{
 						holdTimer = 0;
-						this.playSingAnimation(event.note.noteData.getDirection(), false, 'irritated');
+						this.playSingAnimation(event.note.noteData.getDirection(), false, 'annoyed');
 						return;
 					}
 
@@ -65,10 +65,10 @@ class Boyfriend_Macohi_CharacterScript extends MultiSparrowCharacter
 
 			if (v.set_irritated != null)
 			{
-				irritated = v.set_irritated;
+				annoyed = v.set_irritated;
 
-				if (irritated)
-					idleSuffix = '-irritated';
+				if (annoyed)
+					idleSuffix = '-annoyed';
 				else
 					idleSuffix = '';
 			}
