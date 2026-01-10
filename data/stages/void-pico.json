@@ -40,7 +40,7 @@
                     "flipY": false,
                     "frameIndices": [],
                     "frameRate": 24,
-                    "looped": true,
+                    "looped": false,
                     "name": "idle",
                     "offsets": [
                         0,

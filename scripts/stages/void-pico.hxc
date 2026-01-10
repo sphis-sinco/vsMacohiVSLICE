@@ -1,0 +1,14 @@
+import funkin.play.stage.Stage;
+
+class VoidPicoVersionStage extends Stage
+{
+    public function new()
+    {
+        super('void-pico');
+    }
+
+    override function onBeatHit()
+    {
+        getNamedProp('bf macoroni').animation.play('idle');
+    }
+}
