@@ -1,6 +1,6 @@
 {
     "version": "2.2.4",
-    "songName": "Melo Tick (Erect)",
+    "songName": "Comfort Zone",
     "artist": "Macohi",
     "charter": "Macohi",
     "divisions": 96,
@@ -14,27 +14,29 @@
     "playData": {
         "songVariations": [],
         "difficulties": [
-            "erect",
-            "nightmare"
+            "easy",
+            "normal",
+            "hard"
         ],
         "characters": {
-            "player": "bf",
+            "player": "macohi-comfort-zone",
             "girlfriend": "",
-            "opponent": "macohi",
-            "instrumental": "erect",
+            "opponent": "",
+            "instrumental": "",
             "altInstrumentals": [],
             "opponentVocals": [
-                "macohi"
+                ""
             ],
             "playerVocals": [
-                "bf"
+                "macohi-comfort-zone"
             ]
         },
-        "stage": "void-erect",
+        "stage": "void-comfort-zone",
         "noteStyle": "funkin",
         "ratings": {
-            "nightmare": 10,
-            "erect": 9
+            "easy": 3,
+            "normal": 3,
+            "hard": 4
         },
         "album": "macohiAlbum1",
         "previewStart": 0,
@@ -46,7 +48,7 @@
         {
             "t": 0,
             "b": 0,
-            "bpm": 140,
+            "bpm": 80,
             "n": 4,
             "d": 4,
             "bt": [

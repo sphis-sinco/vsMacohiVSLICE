@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="macohi-comfort-zone.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="macohi comfort zone animation down0000" x="4" y="4" width="610" height="643" frameX="0" frameY="-22" frameWidth="610" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation down0001" x="4" y="4" width="610" height="643" frameX="0" frameY="-22" frameWidth="610" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation down0002" x="622" y="4" width="581" height="662" frameX="-15" frameY="0" frameWidth="610" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation down0003" x="622" y="4" width="581" height="662" frameX="-15" frameY="0" frameWidth="610" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation down0004" x="622" y="4" width="581" height="662" frameX="-15" frameY="0" frameWidth="610" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation down miss0000" x="4" y="4" width="610" height="643" frameX="0" frameY="-18" frameWidth="610" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation down miss0001" x="1211" y="4" width="597" height="658" frameX="-7" frameY="-9" frameWidth="610" frameHeight="667"/>
+	<SubTexture name="macohi comfort zone animation down miss0002" x="1816" y="4" width="597" height="657" frameX="-7" frameY="-9" frameWidth="610" frameHeight="667"/>
+	<SubTexture name="macohi comfort zone animation down miss0003" x="2421" y="4" width="580" height="667" frameX="-9" frameY="0" frameWidth="610" frameHeight="667"/>
+	<SubTexture name="macohi comfort zone animation down miss0004" x="3009" y="4" width="581" height="667" frameX="-9" frameY="0" frameWidth="610" frameHeight="667"/>
+	<SubTexture name="macohi comfort zone animation idle0000" x="3598" y="4" width="399" height="685" frameX="0" frameY="-19" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0001" x="3598" y="4" width="399" height="685" frameX="0" frameY="-19" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0002" x="4" y="697" width="388" height="701" frameX="-7" frameY="-10" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0003" x="4" y="697" width="388" height="701" frameX="-7" frameY="-10" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0004" x="400" y="697" width="383" height="713" frameX="-9" frameY="-4" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0005" x="400" y="697" width="383" height="713" frameX="-9" frameY="-4" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0006" x="791" y="697" width="381" height="719" frameX="-9" frameY="-1" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0007" x="791" y="697" width="381" height="719" frameX="-9" frameY="-1" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0008" x="1180" y="697" width="381" height="721" frameX="-9" frameY="0" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0009" x="1180" y="697" width="381" height="721" frameX="-9" frameY="0" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0010" x="1180" y="697" width="381" height="721" frameX="-9" frameY="0" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0011" x="1180" y="697" width="381" height="721" frameX="-9" frameY="0" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0012" x="1180" y="697" width="381" height="721" frameX="-9" frameY="0" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation idle0013" x="1180" y="697" width="381" height="721" frameX="-9" frameY="0" frameWidth="399" frameHeight="721"/>
+	<SubTexture name="macohi comfort zone animation left0000" x="1569" y="697" width="459" height="651" frameX="0" frameY="-3" frameWidth="459" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation left0001" x="1569" y="697" width="459" height="651" frameX="0" frameY="-3" frameWidth="459" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation left0002" x="2036" y="697" width="425" height="665" frameX="-19" frameY="0" frameWidth="459" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation left0003" x="2036" y="697" width="425" height="665" frameX="-19" frameY="0" frameWidth="459" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation left0004" x="2036" y="697" width="425" height="665" frameX="-19" frameY="0" frameWidth="459" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation left miss0000" x="1569" y="697" width="459" height="651" frameX="0" frameY="-1" frameWidth="459" frameHeight="665"/>
+	<SubTexture name="macohi comfort zone animation left miss0001" x="2469" y="697" width="469" height="652" frameX="-2" frameY="0" frameWidth="471" frameHeight="668"/>
+	<SubTexture name="macohi comfort zone animation left miss0002" x="2946" y="697" width="469" height="651" frameX="-2" frameY="0" frameWidth="471" frameHeight="668"/>
+	<SubTexture name="macohi comfort zone animation left miss0003" x="3423" y="697" width="425" height="663" frameX="-16" frameY="-4" frameWidth="471" frameHeight="668"/>
+	<SubTexture name="macohi comfort zone animation left miss0004" x="4" y="1426" width="425" height="664" frameX="-16" frameY="-4" frameWidth="471" frameHeight="668"/>
+	<SubTexture name="macohi comfort zone animation right0000" x="437" y="1426" width="485" height="657" frameX="-2" frameY="0" frameWidth="487" frameHeight="678"/>
+	<SubTexture name="macohi comfort zone animation right0001" x="437" y="1426" width="485" height="657" frameX="-2" frameY="0" frameWidth="487" frameHeight="678"/>
+	<SubTexture name="macohi comfort zone animation right0002" x="930" y="1426" width="464" height="678" frameX="0" frameY="0" frameWidth="487" frameHeight="678"/>
+	<SubTexture name="macohi comfort zone animation right0003" x="930" y="1426" width="464" height="678" frameX="0" frameY="0" frameWidth="487" frameHeight="678"/>
+	<SubTexture name="macohi comfort zone animation right0004" x="930" y="1426" width="464" height="678" frameX="0" frameY="0" frameWidth="487" frameHeight="678"/>
+	<SubTexture name="macohi comfort zone animation right miss0000" x="1402" y="1426" width="485" height="657" frameX="-4" frameY="0" frameWidth="489" frameHeight="690"/>
+	<SubTexture name="macohi comfort zone animation right miss0001" x="1895" y="1426" width="481" height="684" frameX="-4" frameY="-6" frameWidth="489" frameHeight="690"/>
+	<SubTexture name="macohi comfort zone animation right miss0002" x="2384" y="1426" width="481" height="683" frameX="-4" frameY="-7" frameWidth="489" frameHeight="690"/>
+	<SubTexture name="macohi comfort zone animation right miss0003" x="2873" y="1426" width="465" height="682" frameX="0" frameY="-4" frameWidth="489" frameHeight="690"/>
+	<SubTexture name="macohi comfort zone animation right miss0004" x="3346" y="1426" width="464" height="683" frameX="0" frameY="-4" frameWidth="489" frameHeight="690"/>
+	<SubTexture name="macohi comfort zone animation up0000" x="4" y="2118" width="396" height="734" frameX="-3" frameY="0" frameWidth="399" frameHeight="740"/>
+	<SubTexture name="macohi comfort zone animation up0001" x="4" y="2118" width="396" height="734" frameX="-3" frameY="0" frameWidth="399" frameHeight="740"/>
+	<SubTexture name="macohi comfort zone animation up0002" x="408" y="2118" width="367" height="729" frameX="0" frameY="-11" frameWidth="399" frameHeight="740"/>
+	<SubTexture name="macohi comfort zone animation up0003" x="408" y="2118" width="367" height="729" frameX="0" frameY="-11" frameWidth="399" frameHeight="740"/>
+	<SubTexture name="macohi comfort zone animation up0004" x="408" y="2118" width="367" height="729" frameX="0" frameY="-11" frameWidth="399" frameHeight="740"/>
+	<SubTexture name="macohi comfort zone animation up miss0000" x="4" y="2118" width="396" height="734" frameX="-1" frameY="-3" frameWidth="399" frameHeight="740"/>
+	<SubTexture name="macohi comfort zone animation up miss0001" x="783" y="2118" width="414" height="739"/>
+	<SubTexture name="macohi comfort zone animation up miss0002" x="1205" y="2118" width="412" height="739" frameX="-1" frameY="0" frameWidth="414" frameHeight="739"/>
+	<SubTexture name="macohi comfort zone animation up miss0003" x="1625" y="2118" width="384" height="695" frameX="-1" frameY="-16" frameWidth="414" frameHeight="739"/>
+	<SubTexture name="macohi comfort zone animation up miss0004" x="2017" y="2118" width="386" height="695" frameX="0" frameY="-16" frameWidth="414" frameHeight="739"/>
+</TextureAtlas>

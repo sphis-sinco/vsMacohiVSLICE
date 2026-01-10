@@ -46,7 +46,7 @@
 			"prefix": "macohi animation idle0",
 			"animType": "framelabel",
 			"flipX": false,
-			"looped": true,
+			"looped": false,
 			"name": "idle"
 		},
 		{
@@ -166,7 +166,7 @@
 			"animType": "framelabel",
 			"flipX": false,
 			"name": "idle-irritated",
-			"looped": true,
+			"looped": false,
 			"flipY": false,
 			"frameRate": 24,
 			"assetPath": "characters/macohi-irritated"

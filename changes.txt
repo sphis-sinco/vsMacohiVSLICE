@@ -1,1 +1,4 @@
 * Added Melo Tick Cutscene
+* Macohi idle looping has been set to false
+* Melo Tick (Erect) now has the display name : "Melo Tick (Erect)"
+* Added new song : Comfort Zone

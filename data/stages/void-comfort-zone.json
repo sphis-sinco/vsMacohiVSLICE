@@ -1,0 +1,90 @@
+{
+    "version": "1.0.2",
+    "name": "Void (Comfort Zone)",
+    "props": [
+        {
+            "alpha": 1,
+            "angle": 0,
+            "animType": "sparrow",
+            "animations": [],
+            "assetPath": "#000000",
+            "atlasSettings": null,
+            "blend": "",
+            "color": "#000000",
+            "danceEvery": 0,
+            "flipX": false,
+            "flipY": false,
+            "isPixel": true,
+            "name": "black",
+            "position": [
+                -3000,
+                -3000
+            ],
+            "scale": 6000,
+            "scroll": [
+                1,
+                1
+            ],
+            "startingAnimation": "",
+            "zIndex": 2
+        }
+    ],
+    "characters": {
+        "bf": {
+            "alpha": 1,
+            "angle": 0,
+            "cameraOffsets": [
+                0,
+                0
+            ],
+            "position": [
+                0,
+                0
+            ],
+            "scale": 1,
+            "scroll": [
+                1,
+                1
+            ],
+            "zIndex": 300
+        },
+        "dad": {
+            "alpha": 1,
+            "angle": 0,
+            "cameraOffsets": [
+                0,
+                0
+            ],
+            "position": [
+                0,
+                0
+            ],
+            "scale": 1,
+            "scroll": [
+                1,
+                1
+            ],
+            "zIndex": 200
+        },
+        "gf": {
+            "alpha": 1,
+            "angle": 0,
+            "cameraOffsets": [
+                0,
+                0
+            ],
+            "position": [
+                0,
+                0
+            ],
+            "scale": 1,
+            "scroll": [
+                1,
+                1
+            ],
+            "zIndex": 100
+        }
+    },
+    "cameraZoom": 1,
+    "directory": "shared"
+}
