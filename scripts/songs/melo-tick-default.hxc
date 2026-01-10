@@ -1,0 +1,80 @@
+import funkin.play.song.Song;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.PlayState;
+import funkin.play.stage.StageProp;
+import flixel.util.FlxColor;
+import funkin.graphics.FunkinSprite;
+
+using StringTools;
+
+class MeloTickDefault extends Song {
+
+  var hasPlayedInGameCutscene:Bool;
+  var bgSprite:FunkinSprite;
+
+  public function new()
+  {
+    super('melo-tick');
+
+    hasPlayedInGameCutscene = false;
+	}
+
+	override public function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+
+		if (this.variation != 'default') // !PlayStatePlaylist.isStoryMode)
+    {
+			hasPlayedInGameCutscene = true;
+		}
+
+		if (hasPlayedInGameCutscene) {
+			trace('Pausing countdown to play in game cutscene');
+
+			hasPlayedInGameCutscene = true;
+
+			event.cancel(); // CANCEL THE COUNTDOWN!
+
+			PlayState.instance.camHUD.visible = false;
+			introCutscene();
+		} else {
+      trace('played cutscene');
+    }
+	}
+
+	function introCutscene() {
+		PlayState.instance.togglePauseButton();
+		PlayState.instance.isInCutscene = true;
+		PlayState.instance.mayPauseGame = false;
+    
+		// trace('Adding black background behind cutscene over UI');
+		bgSprite = new FunkinSprite(0, 0);
+		bgSprite.makeSolidColor(2000, 2500, 0xFFFFFFFF);
+		bgSprite.cameras = [PlayState.instance.camCutscene]; // Show over the HUD but below the video.
+		// this
+		bgSprite.zIndex = -10000;
+		PlayState.instance.add(bgSprite);
+		PlayState.instance.refresh();
+	}
+
+  
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedInGameCutscene = true;
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedInGameCutscene = false;
+  }
+}
