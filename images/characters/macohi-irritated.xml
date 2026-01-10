@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="macohi-irritated.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="macohi animation down irritated0000" x="4" y="4" width="217" height="405" frameX="0" frameY="-6" frameWidth="217" frameHeight="411"/>
+	<SubTexture name="macohi animation down irritated0001" x="4" y="4" width="217" height="405" frameX="0" frameY="-6" frameWidth="217" frameHeight="411"/>
+	<SubTexture name="macohi animation down irritated0002" x="229" y="4" width="200" height="411" frameX="-8" frameY="0" frameWidth="217" frameHeight="411"/>
+	<SubTexture name="macohi animation down irritated0003" x="229" y="4" width="200" height="411" frameX="-8" frameY="0" frameWidth="217" frameHeight="411"/>
+	<SubTexture name="macohi animation idle irritated0000" x="437" y="4" width="249" height="384" frameX="0" frameY="-36" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0001" x="437" y="4" width="249" height="384" frameX="0" frameY="-36" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0002" x="694" y="4" width="232" height="406" frameX="-25" frameY="-14" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0003" x="694" y="4" width="232" height="406" frameX="-25" frameY="-14" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0004" x="934" y="4" width="236" height="419" frameX="-24" frameY="-1" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0005" x="1178" y="4" width="236" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0006" x="1422" y="4" width="237" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0007" x="1422" y="4" width="237" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0008" x="1667" y="4" width="238" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0009" x="1667" y="4" width="238" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0010" x="1667" y="4" width="238" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0011" x="1667" y="4" width="238" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0012" x="1667" y="4" width="238" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation idle irritated0013" x="1667" y="4" width="238" height="420" frameX="-24" frameY="0" frameWidth="262" frameHeight="420"/>
+	<SubTexture name="macohi animation left irritated0000" x="4" y="432" width="202" height="408" frameX="0" frameY="-3" frameWidth="216" frameHeight="411"/>
+	<SubTexture name="macohi animation left irritated0001" x="4" y="432" width="202" height="408" frameX="0" frameY="-3" frameWidth="216" frameHeight="411"/>
+	<SubTexture name="macohi animation left irritated0002" x="214" y="432" width="213" height="411" frameX="-3" frameY="0" frameWidth="216" frameHeight="411"/>
+	<SubTexture name="macohi animation left irritated0003" x="214" y="432" width="213" height="411" frameX="-3" frameY="0" frameWidth="216" frameHeight="411"/>
+	<SubTexture name="macohi animation right irritated0000" x="435" y="432" width="295" height="415"/>
+	<SubTexture name="macohi animation right irritated0001" x="435" y="432" width="295" height="415"/>
+	<SubTexture name="macohi animation right irritated0002" x="738" y="432" width="279" height="415" frameX="0" frameY="0" frameWidth="295" frameHeight="415"/>
+	<SubTexture name="macohi animation right irritated0003" x="738" y="432" width="279" height="415" frameX="0" frameY="0" frameWidth="295" frameHeight="415"/>
+	<SubTexture name="macohi animation up irritated0000" x="1025" y="432" width="232" height="446" frameX="0" frameY="0" frameWidth="241" frameHeight="446"/>
+	<SubTexture name="macohi animation up irritated0001" x="1025" y="432" width="232" height="446" frameX="0" frameY="0" frameWidth="241" frameHeight="446"/>
+	<SubTexture name="macohi animation up irritated0002" x="1265" y="432" width="241" height="433" frameX="0" frameY="-13" frameWidth="241" frameHeight="446"/>
+	<SubTexture name="macohi animation up irritated0003" x="1265" y="432" width="241" height="433" frameX="0" frameY="-13" frameWidth="241" frameHeight="446"/>
+</TextureAtlas>
