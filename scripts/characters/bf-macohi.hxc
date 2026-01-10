@@ -1,5 +1,6 @@
 import flixel.FlxG;
 import funkin.audio.FunkinSound;
+import funkin.play.character.CharacterType;
 import funkin.play.character.MultiSparrowCharacter;
 import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
@@ -36,7 +37,7 @@ class Boyfriend_Macohi_CharacterScript extends MultiSparrowCharacter
 			return;
 		}
 
-		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.BOYFRIEND)
+		if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
 			switch (event.note.kind) 
 			{
 				case "MacohiIrritated":
