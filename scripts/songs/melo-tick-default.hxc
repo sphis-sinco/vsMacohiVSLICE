@@ -31,7 +31,7 @@ class MeloTickDefault extends Song {
 			hasPlayedInGameCutscene = true;
 		}
 
-		if (hasPlayedInGameCutscene) {
+		if (!hasPlayedInGameCutscene) {
 			trace('Pausing countdown to play in game cutscene');
 
 			hasPlayedInGameCutscene = true;
