@@ -1,6 +1,7 @@
 import funkin.play.song.Song;
 import funkin.graphics.shaders.DropShadowShader;
 import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
 import funkin.play.stage.StageProp;
 import flixel.util.FlxColor;
 import funkin.graphics.FunkinSprite;
@@ -12,7 +13,7 @@ using StringTools;
 
 class MeloTickDefault extends Song {
 
-  var hasPlayedInGameCutscene:Bool;
+  var playedCutscene:Bool;
   var bgSprite:FunkinSprite;
   var cutsceneSprite:FunkinSprite;
 
@@ -20,21 +21,21 @@ class MeloTickDefault extends Song {
   {
     super('melo-tick');
 
-    hasPlayedInGameCutscene = false;
+    playedCutscene = false;
 	}
 
 	override public function onCountdownStart(event:CountdownScriptEvent):Void {
 		super.onCountdownStart(event);
 
-		if (this.variation != 'default') // !PlayStatePlaylist.isStoryMode)
+		if (!PlayStatePlaylist.isStoryMode)
     {
-			hasPlayedInGameCutscene = true;
+			playedCutscene = true;
 		}
 
-		if (!hasPlayedInGameCutscene) {
+		if (!playedCutscene) {
 			trace('Pausing countdown to play in game cutscene');
 
-			hasPlayedInGameCutscene = true;
+			playedCutscene = true;
 
 			event.cancel(); // CANCEL THE COUNTDOWN!
 
@@ -46,7 +47,7 @@ class MeloTickDefault extends Song {
 	}
 
 	function introCutscene() {
-		// PlayState.instance.togglePauseButton();
+		PlayState.instance.togglePauseButton();
 		PlayState.instance.isInCutscene = true;
 		PlayState.instance.mayPauseGame = false;
     
@@ -60,7 +61,7 @@ class MeloTickDefault extends Song {
 
     cutsceneSprite = FunkinSprite.createSparrow(0,0, 'cutscenes/melo-tick');
     cutsceneSprite.cameras = [PlayState.instance.camCutscene];
-    cutsceneSprite.animation.addByPrefix('cutscene', '_cutscene');
+    cutsceneSprite.animation.addByPrefix('cutscene', '_cutscene', 24, false);
     cutsceneSprite.setPosition(-140.05, -116.65);
     cutsceneSprite.animation.play('cutscene');
 
@@ -68,10 +69,14 @@ class MeloTickDefault extends Song {
       trace(frameNumber);
     });
     cutsceneSprite.animation.onFinish.add(function() {
+      PlayState.instance.remove(bgSprite);
+      PlayState.instance.remove(cutsceneSprite);
+      PlayState.instance.refresh();
+
       PlayState.instance.startCountdown();
       // cutsceneMusic.stop(); // stop the music!!!!!!
 
-      // PlayState.instance.togglePauseButton(true);
+      PlayState.instance.togglePauseButton(true);
       PlayState.instance.isInCutscene = false;
       PlayState.instance.mayPauseGame = true;
     });
@@ -90,7 +95,7 @@ class MeloTickDefault extends Song {
   {
     super.onSongRetry(event);
 
-    hasPlayedInGameCutscene = true;
+    playedCutscene = true;
   }
 
   /**
@@ -100,6 +105,6 @@ class MeloTickDefault extends Song {
   {
     super.onCreate(event);
 
-    hasPlayedInGameCutscene = false;
+    playedCutscene = false;
   }
 }
