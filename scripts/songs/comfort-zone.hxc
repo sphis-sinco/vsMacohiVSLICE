@@ -60,10 +60,12 @@ class ComfortZone extends Song {
 
 		cutsceneSprite = FunkinSprite.createSparrow(0, 0, 'cutscenes/comfort-zone');
 		cutsceneSprite.cameras = [PlayState.instance.camCutscene];
-		cutsceneSprite.animation.addByPrefix('cutscene', 'Dont crack', 24, false);
-		cutsceneSprite.cameras = [PlayState.instance.camCutscene]; // Show over the HUD but below the video.
-		cutsceneSprite.setPosition(-457.6, -885.9);
-		cutsceneSprite.animation.play('cutscene');
+		cutsceneSprite.animation.addByPrefix('c', 'cutscene', 24, false);
+		cutsceneSprite.scale.set(2,2);
+		cutsceneSprite.updateHitbox();
+		cutsceneSprite.setPosition(0,0);
+		cutsceneSprite.animation.play('c');
+		cutsceneSprite.screenCenter();
 
 		var portalSfx:FunkinSound = FunkinSound.load(Paths.sound("portal"), 1.0, true);
 		portalSfx.pause();
@@ -85,14 +87,17 @@ class ComfortZone extends Song {
 					FunkinSound.playOnce(Paths.sound('pop'), 0.5);
 				case 140:
 					bgSprite.visible = false;
+					PlayState.instance.remove(bgSprite);
+					PlayState.instance.refresh();
 					breathingSfx.play(false);
 				case 168:
 					FlxTween.tween(cutsceneSprite, {alpha: 0}, 1);
 			}
 		});
+
 		cutsceneSprite.animation.onFinish.add(function() {
 			breathingSfx.pause();
-			PlayState.instance.remove(bgSprite);
+			// PlayState.instance.remove(bgSprite);
 			PlayState.instance.remove(cutsceneSprite);
 			PlayState.instance.refresh();
 
