@@ -64,6 +64,7 @@ class Macoroni_DefaultVariation_SongScript extends Song {
     cutsceneSprite.cameras = [PlayState.instance.camCutscene];
     cutsceneSprite.animation.addByPrefix('cutscene', 'IM MAKING FUCKING MAC AND CHEESE AND NO ONE CAN STOP ME', 24, false);
     cutsceneSprite.setPosition(-102.65, -141.75);
+    cutsceneSprite.screenCenter();
     cutsceneSprite.animation.play('cutscene');
 
     var portalSfx:FunkinSound = FunkinSound.load(Paths.sound("portal"), 1.0, true);
@@ -82,6 +83,7 @@ class Macoroni_DefaultVariation_SongScript extends Song {
         case 116:
           FunkinSound.playOnce(Paths.sound('small light switch 1'), 1.0);
         case 120:
+          bgSprite.color = 0x000000;
           FunkinSound.playOnce(Paths.sound('Lights_Shut_off', 'week5'), 0.5);
       }
     });

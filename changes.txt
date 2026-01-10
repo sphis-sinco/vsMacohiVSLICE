@@ -1,0 +1,2 @@
+* Fixed incorrect bg color for mobile cutscenes (on the edges)
+* Fixed cutscenes on mobile not being centered

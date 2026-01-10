@@ -64,6 +64,7 @@ class MeloTick_DefaultVariation_SongScript extends Song {
     cutsceneSprite.cameras = [PlayState.instance.camCutscene];
     cutsceneSprite.animation.addByPrefix('cutscene', '_cutscene', 24, false);
     cutsceneSprite.setPosition(-140.05, -116.65);
+    cutsceneSprite.screenCenter();
     cutsceneSprite.animation.play('cutscene');
 
     var portalSfx:FunkinSound = FunkinSound.load(Paths.sound("portal"), 1.0, true);
@@ -86,6 +87,7 @@ class MeloTick_DefaultVariation_SongScript extends Song {
           FunkinSound.playOnce(Paths.sound('small light switch 1'), 1.0);
         case 97:
           trace('"Dun!!" sound (like from that one fnf vid u saw that played from the start)');
+          bgSprite.color = 0x000000;
           FunkinSound.playOnce(Paths.sound('Lights_Shut_off', 'week5'), 0.5);
       }
     });
