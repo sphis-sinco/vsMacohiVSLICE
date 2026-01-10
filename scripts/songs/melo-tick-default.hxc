@@ -7,6 +7,8 @@ import funkin.graphics.FunkinSprite;
 import funkin.util.assets.FlxAnimationUtil;
 import funkin.Paths;
 import haxe.Json;
+import funkin.modding.module.ModuleHandler;
+import objects.CutsceneObject;
 
 using StringTools;
 
@@ -14,7 +16,7 @@ class MeloTickDefault extends Song {
 
   var hasPlayedInGameCutscene:Bool;
   var bgSprite:FunkinSprite;
-  var cutsceneSprite:FunkinSprite;
+  var cutsceneSprite:CutsceneObject;
 
   public function new()
   {
@@ -46,7 +48,7 @@ class MeloTickDefault extends Song {
 	}
 
 	function introCutscene() {
-		PlayState.instance.togglePauseButton();
+		// PlayState.instance.togglePauseButton(true);
 		PlayState.instance.isInCutscene = true;
 		PlayState.instance.mayPauseGame = false;
     
@@ -58,16 +60,17 @@ class MeloTickDefault extends Song {
 		bgSprite.zIndex = -10000;
 		PlayState.instance.add(bgSprite);
 
-    cutsceneSprite = FunkinSprite.createSparrow(0,0, 'cutscenes/melo-tick');
+    cutsceneSprite = new CutsceneObject('melo-tick');
     cutsceneSprite.cameras = [PlayState.instance.camCutscene];
-
-    var cutscene = Json.parse(Assets.getText(Paths.json('cutscenes/melo-tick')));
-    trace(cutscene);
-    FlxAnimationUtil.addAtlasAnimations(cutsceneSprite, cutscene.animations);
-    cutsceneSprite.setPosition(cutscene.position.x, cutscene.position.y);
-    cutsceneSprite.animation.play(cutscene.startAnimation);
-
 		PlayState.instance.add(cutsceneSprite);
+    cutsceneSprite.onFinished.add(function() {
+      PlayState.instance.startCountdown();
+      // cutsceneMusic.stop(); // stop the music!!!!!!
+
+      // PlayState.instance.togglePauseButton(true);
+      PlayState.instance.isInCutscene = false;
+      PlayState.instance.mayPauseGame = true;
+    });
 
 		PlayState.instance.refresh();
 	}

@@ -1,0 +1,88 @@
+package objects;
+
+import funkin.graphics.FunkinSprite;
+import funkin.util.assets.FlxAnimationUtil;
+import funkin.Paths;
+import flixel.util.FlxSignal;
+import haxe.Json;
+
+class CutsceneObject extends FunkinSprite
+{
+    public var id:String = '';
+
+    public var cutscene:Dynamic = {};
+
+    public var onFinished:FlxSignal;
+
+    override public function new(id:String)
+    {
+        onFinished = new FlxSignal();
+
+        if (id == null)
+        {
+            id = 'melo-tick';
+            trace('Null Cutscene Object ID : defaulted to melo-tick');
+        }
+
+        this.id = id;
+        
+        this.cutscene = Json.parse(Assets.getText(Paths.json('cutscenes/'+id)));
+
+        if (this.cutscene == null)
+        {
+            this.id = 'melo-tick';
+            this.cutscene = Json.parse(Assets.getText(Paths.json('cutscenes/melo-tick')));
+            trace('Null Cutscene JSON : defaulted to melo-tick cutscene JSON');
+        }
+
+        trace('Initalized Cutscene Object (' + this.id +')');
+
+        if (this.cutscene.animations == null)
+        {
+            trace('Null animations : you\'re fucked');
+        }
+
+        if (this.cutscene.position == null)
+        {
+            this.cutscene.position = {x: 0, y: 0};
+            trace('Null Position : defaulted to (x:0, y:0)');
+        }
+
+        for (animation in this.cutscene.animations)
+        {
+            if (animation.looped)
+            {
+                trace(animation.name + ' is looped : why?');
+                animation.looped = false;
+            }
+        }
+
+        if (this.cutscene.animationOrder == null)
+        {
+            for (animation in this.cutscene.animations)
+                this.cutscene.animationOrder.push(animation.name);
+
+            trace('Null Animation Order : defaulted to ' + this.cutscene.animationOrder);
+        }
+
+        createCutsceneObject();
+    }
+
+    public function createCutsceneObject()
+    {
+        FlxAnimationUtil.addAtlasAnimations(this, this.cutscene.animations);
+        
+        this.setPosition(this.cutscene.position.x, this.cutscene.position.y);
+
+        this.animation.play(this.cutscene.animationOrder[0]);
+
+        this.animation.onFinish.add(function() {
+
+            if (this.cutscene.animationOrder.getIndexOf(this.animation.name) + 1 >= this.cutscene.animationOrder.length)
+                onFinished.dispath();
+            else
+                this.animation.play(this.cutscene.animationOrder[this.cutscene.animationOrder.getIndexOf(this.animation.name) + 1]);
+
+        });
+    }
+}
