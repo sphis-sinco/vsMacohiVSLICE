@@ -70,6 +70,7 @@ class ComfortZone extends Song {
 		var breathingSfx:FunkinSound = FunkinSound.load(Paths.sound("breathing"), 1.0, true);
 		breathingSfx.pause();
 
+		cutsceneSprite.frame = 86;
 		cutsceneSprite.animation.onFrameChange.add(function(animName:String, frameNumber:Int, frameIndex:Int) {
 			// trace(frameNumber);
 
