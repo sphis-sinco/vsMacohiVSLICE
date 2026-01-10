@@ -12,7 +12,7 @@ import haxe.Json;
 
 using StringTools;
 
-class MeloTickDefault extends Song {
+class MacoroniDefault extends Song {
 
   var playedCutscene:Bool;
   var bgSprite:FunkinSprite;
@@ -20,7 +20,7 @@ class MeloTickDefault extends Song {
 
   public function new()
   {
-    super('melo-tick');
+    super('macoroni');
 
     playedCutscene = false;
 	}
@@ -60,9 +60,9 @@ class MeloTickDefault extends Song {
 		bgSprite.zIndex = -10000;
 		PlayState.instance.add(bgSprite);
 
-    cutsceneSprite = FunkinSprite.createSparrow(0,0, 'cutscenes/melo-tick');
+    cutsceneSprite = FunkinSprite.createSparrow(0,0, 'cutscenes/macoroni');
     cutsceneSprite.cameras = [PlayState.instance.camCutscene];
-    cutsceneSprite.animation.addByPrefix('cutscene', '_cutscene', 24, false);
+    cutsceneSprite.animation.addByPrefix('cutscene', 'IM MAKING FUCKING MAC AND CHEESE AND NO ONE CAN STOP ME', 24, false);
     cutsceneSprite.setPosition(-140.05, -116.65);
     cutsceneSprite.animation.play('cutscene');
 
@@ -75,17 +75,13 @@ class MeloTickDefault extends Song {
       switch(frameNumber)
       {
         case 1:
-          trace('magic sound');
           portalSfx.play(true);
-        case 25:
-          trace('pop sound');
+        case 97:
           portalSfx.pause();
           FunkinSound.playOnce(Paths.sound('pop'), 0.5);
-        case 60:
-          trace('turnaround sound');
+        case 116:
           FunkinSound.playOnce(Paths.sound('small light switch 1'), 1.0);
-        case 97:
-          trace('"Dun!!" sound (like from that one fnf vid u saw that played from the start)');
+        case 120:
           FunkinSound.playOnce(Paths.sound('Lights_Shut_off', 'week5'), 0.5);
       }
     });
