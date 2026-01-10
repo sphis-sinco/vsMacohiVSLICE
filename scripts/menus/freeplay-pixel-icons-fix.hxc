@@ -1,4 +1,9 @@
+import flixel.FlxG;
 import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.play.PlayState;
+
+using StringTools;
 
 class FreeplayPixelIconsFix_ModuleScript extends Module
 {
@@ -6,4 +11,62 @@ class FreeplayPixelIconsFix_ModuleScript extends Module
     {
         super('freeplay-pixel-icons-fix');
     }
+	
+	var currentSubState:String;
+	var freeplaySubState:Bool;
+
+	public override function onSubStateOpenEnd(event:SubStateScriptEvent) {
+		currentSubState = ReflectUtil.getClassNameOf(FlxG.state.subState);
+
+		trace("CURRENT SUBSTATE: " + currentSubState);
+		freeplaySubState = (currentSubState == "funkin.ui.freeplay.FreeplayState");
+	}
+
+	public function onUpdate(event:UpdateScriptEvent)
+	{
+		freeplayUpdate();
+	}
+
+	public function freeplayUpdate() {
+		if (!freeplaySubState)
+			return;
+
+		var freeplay = FlxG.state.subState;
+
+		if ((freeplay ?? null) == null)
+			return;
+
+		if ((freeplay.grpCapsules ?? null) == null)
+			return;
+
+		for (capsule in freeplay.grpCapsules)
+        {
+			var songCharacter = '';
+			var songName = '';
+
+			if (capsule.freeplayData != null) {
+                songCharacter = (capsule.freeplayData.songCharacter ?? null);
+				songName = capsule.freeplayData.fullSongName;
+			}
+
+            // trace(songName + ' : ' + songCharacter);
+
+            if (songCharacter != null)
+            {
+                for (thing in XOFFSETS)
+                {
+                    if (songCharacter.toLowerCase().contains(thing[0]))
+                    {
+                        // trace('macowi');
+                        capsule.pixelIcon.origin.x = thing[1];
+                    }
+                }
+            }
+        }
+	}
+
+    var XOFFSETS = [
+        ['macohi', 130.0],
+        ['nicom', 135.0]
+    ];
 }
