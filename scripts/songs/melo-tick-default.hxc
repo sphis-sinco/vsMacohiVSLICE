@@ -74,17 +74,17 @@ class MeloTickDefault extends Song {
 
       switch(frameNumber)
       {
-        case 0:
+        case 1:
           trace('magic sound');
           portalSfx.play(true);
-        case 25:
+        case 26:
           trace('pop sound');
           portalSfx.pause();
           FunkinSound.playOnce(Paths.sound('pop'), 0.5);
-        case 60:
+        case 61:
           trace('turnaround sound');
-          FunkinSound.playOnce(Paths.sound('small light switch 1'), 0.5);
-        case 97:
+          FunkinSound.playOnce(Paths.sound('small light switch 1'), 1.0);
+        case 98:
           trace('"Dun!!" sound (like from that one fnf vid u saw that played from the start)');
           FunkinSound.playOnce(Paths.sound('Lights_Shut_off', 'week5'), 1.0);
       }
