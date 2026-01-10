@@ -1,105 +1,336 @@
 {
-  "version": "1.0.0",
-  "name": "Boyfriend (Macohi)",
-  "renderType": "multisparrow",
-  "assetPath": "characters/BOYFRIEND",
-  "flipX": true,
-  "offsets": [17, 14],
-  "cameraOffsets": [-18, 36],
-  "death": {
-    "cameraOffsets": [-73, 42]
-  },
-  "animations": [
-    {
-      "name": "idle",
-      "prefix": "Idle"
-    },
-    {
-      "name": "singLEFT",
-      "prefix": "Left"
-    },
-    {
-      "name": "singDOWN",
-      "prefix": "Down"
-    },
-    {
-      "name": "singUP",
-      "prefix": "Up"
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "Right"
-    },
-    {
-      "name": "singLEFTmiss",
-      "prefix": "Left Miss"
-    },
-    {
-      "name": "singDOWNmiss",
-      "prefix": "Down Miss"
-    },
-    {
-      "name": "singUPmiss",
-      "prefix": "Up Miss"
-    },
-    {
-      "name": "singRIGHTmiss",
-      "prefix": "Right Miss"
-    },
-    {
-      "name": "hey",
-      "prefix": "Hey"
-    },
-    {
-      "name": "cheer",
-      "prefix": "Cheer"
-    },
-
-    
-    {
-      "name": "idle-annoyed",
-      "prefix": "BF idle dance",
-      "assetPath": "characters/boyfriend-annoyed"
-    },
-    {
-      "name": "singLEFT-annoyed",
-      "prefix": "BF NOTE LEFT0",
-      "assetPath": "characters/boyfriend-annoyed"
-    },
-    {
-      "name": "singDOWN-annoyed",
-      "prefix": "BF NOTE DOWN0",
-      "assetPath": "characters/boyfriend-annoyed"
-    },
-    {
-      "name": "singUP-annoyed",
-      "prefix": "BF NOTE UP0",
-      "assetPath": "characters/boyfriend-annoyed"
-    },
-    {
-      "name": "singRIGHT-annoyed",
-      "prefix": "BF NOTE RIGHT0",
-      "assetPath": "characters/boyfriend-annoyed"
-    },
-    {
-      "name": "singLEFTmiss-annoyed",
-      "prefix": "BF NOTE LEFT MISS",
-      "assetPath": "characters/boyfriend-annoyed"
-    },
-    {
-      "name": "singDOWNmiss-annoyed",
-      "prefix": "BF NOTE DOWN MISS",
-      "assetPath": "characters/boyfriend-annoyed"
-    },
-    {
-      "name": "singUPmiss-annoyed",
-      "prefix": "BF NOTE UP MISS",
-      "assetPath": "characters/boyfriend-annoyed"
-    },
-    {
-      "name": "singRIGHTmiss-annoyed",
-      "prefix": "BF NOTE RIGHT MISS",
-      "assetPath": "characters/boyfriend-annoyed"
-    }
-  ]
+	"renderType": "multisparrow",
+	"offsets": [
+		17,
+		14
+	],
+	"applyStageMatrix": false,
+	"startingAnimation": "idle",
+	"death": {
+		"cameraOffsets": [
+			-73,
+			42
+		]
+	},
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"isPixel": false,
+		"scale": 1,
+		"flipX": false,
+		"id": "bf"
+	},
+	"assetPath": "characters/BOYFRIEND",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Boyfriend (Macohi)",
+	"flipX": true,
+	"cameraOffsets": [
+		-18,
+		36
+	],
+	"isPixel": false,
+	"singTime": 8,
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"swfMode": true,
+		"useRenderTexture": false,
+		"cacheOnLoad": false,
+		"filterQuality": 1
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "BF idle dance",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				5,
+				-6
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE LEFT0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-16,
+				-52
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE DOWN0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-45,
+				35
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE UP0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-45,
+				-5
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE RIGHT0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				10,
+				20
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE LEFT MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-20,
+				-20
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE DOWN MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWNmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-40,
+				30
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE UP MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singUPmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-40,
+				20
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE RIGHT MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				5
+			],
+			"frameRate": 24,
+			"prefix": "BF HEY!!",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "hey"
+		},
+		,
+		{
+			"name": "firstDeath",
+			"prefix": "BF dies",
+			"offsets": [
+				-37,
+				11
+			]
+		},
+		{
+			"name": "fakeoutDeath",
+			"prefix": "BF dies",
+			"offsets": [
+				-37,
+				11
+			]
+		},
+		{
+			"name": "deathLoop",
+			"prefix": "BF Dead Loop",
+			"looped": true,
+			"offsets": [
+				-37,
+				5
+			]
+		},
+		{
+			"name": "deathConfirm",
+			"prefix": "BF Dead confirm",
+			"offsets": [
+				-37,
+				69
+			]
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"prefix": "BF-ANNOYED idle dance",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "idle-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				5,
+				-6
+			],
+			"prefix": "BF-ANNOYED NOTE LEFT0",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singLEFT-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-16,
+				-52
+			],
+			"prefix": "BF-ANNOYED NOTE DOWN0",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singDOWN-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-45,
+				35
+			],
+			"prefix": "BF-ANNOYED NOTE UP0",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singUP-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-45,
+				-5
+			],
+			"prefix": "BF-ANNOYED NOTE RIGHT0",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singRIGHT-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				10,
+				20
+			],
+			"prefix": "BF-ANNOYED NOTE LEFT MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singLEFTmiss-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-20,
+				-20
+			],
+			"prefix": "BF-ANNOYED NOTE DOWN MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singDOWNmiss-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-40,
+				30
+			],
+			"prefix": "BF-ANNOYED NOTE UP MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singUPmiss-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-40,
+				20
+			],
+			"prefix": "BF-ANNOYED NOTE RIGHT MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singRIGHTmiss-annoyed",
+			"looped": false,
+			"flipY": false,
+			"assetPath": "characters/boyfriend-annoyed",
+			"frameRate": 24
+		}
+	]
 }
