@@ -17,6 +17,7 @@ import funkin.Preferences;
 
 class Boyfriend_Macohi_CharacterScript extends MultiSparrowCharacter
 {
+	var irritated:Bool = false;
   function new()
   {
     super('bf-macohi');
@@ -26,6 +27,59 @@ class Boyfriend_Macohi_CharacterScript extends MultiSparrowCharacter
   {
     super.onCreate(event);
   }
+
+	function onNoteHit(event:HitNoteScriptEvent)
+	{
+		if (event.eventCanceled)
+		{
+			// onNoteHit event was cancelled by the gameplay module.
+			return;
+		}
+
+		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.BOYFRIEND)
+			switch (event.note.kind) 
+			{
+				case "MacohiIrritated":
+					holdTimer = 0;
+					this.playSingAnimation(event.note.noteData.getDirection(), false, 'irritated');
+					return;
+				default:
+					if (irritated)
+					{
+						holdTimer = 0;
+						this.playSingAnimation(event.note.noteData.getDirection(), false, 'irritated');
+						return;
+					}
+
+					super.onNoteHit(event);
+			}
+	}
+
+	function onSongEvent(event:SongEventScriptEvent)
+	{
+		if (event.eventData.eventKind == "MacohiEvent")
+		{
+			var v = event.eventData.value;
+
+			if (v == null) return;
+
+			if (v.set_irritated != null)
+			{
+				irritated = v.set_irritated;
+
+				if (irritated)
+					idleSuffix = '-irritated';
+				else
+					idleSuffix = '';
+			}
+		}
+	}
+
+	override function destroy():Void 
+	{
+		irritated = false;
+		super.destroy();
+	}
 
   function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
   {
