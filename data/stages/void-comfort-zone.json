@@ -85,6 +85,6 @@
             "zIndex": 100
         }
     },
-    "cameraZoom": 1,
+    "cameraZoom": 0.5,
     "directory": "shared"
 }
