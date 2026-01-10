@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="macohiAlbum2-text.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="open0000" x="4" y="4" width="249" height="191"/>
+	<SubTexture name="switch0000" x="4" y="4" width="249" height="191"/>
+</TextureAtlas>
