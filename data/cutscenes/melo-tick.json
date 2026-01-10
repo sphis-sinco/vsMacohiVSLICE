@@ -1,0 +1,25 @@
+{
+    "animations": [
+        {
+            "animType": null,
+            "assetPath": null,
+            "flipX": false,
+            "flipY": false,
+            "frameIndices": [],
+            "frameRate": 24,
+            "looped": false,
+            "name": "cutscene",
+            "offsets": [
+                0,
+                0
+            ],
+            "prefix": "_cutscene"
+        }
+    ],
+    "assetPath": "cutscenes/melo-tick",
+    "startAnimation": "cutscene",
+    "position": {
+        "x": -140.05,
+        "y": -116.65
+    }
+}
