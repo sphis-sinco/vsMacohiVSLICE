@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Boyfriend (Macohi",
+  "name": "Boyfriend (Macohi)",
   "renderType": "multianimateatlas",
   "assetPath": "shared:characters/bf",
   "flipX": true,
