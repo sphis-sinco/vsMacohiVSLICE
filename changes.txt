@@ -1,3 +1,4 @@
+* Macohi (ME!) has a role in the metadata now
 * Script class names have been renamed to follow a kinda format : (name_version_scriptType)
 * Added Macoroni Cutscene
 * Added Melo Tick Cutscene
