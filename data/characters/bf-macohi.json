@@ -1,0 +1,105 @@
+{
+  "version": "1.0.0",
+  "name": "Boyfriend (Macohi",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/bf",
+  "flipX": true,
+  "offsets": [17, 14],
+  "cameraOffsets": [-18, 36],
+  "death": {
+    "cameraOffsets": [-73, 42]
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Idle"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "Left"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "Down"
+    },
+    {
+      "name": "singUP",
+      "prefix": "Up"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "Right"
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "Left Miss"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "Down Miss"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "Up Miss"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "Right Miss"
+    },
+    {
+      "name": "hey",
+      "prefix": "Hey"
+    },
+    {
+      "name": "cheer",
+      "prefix": "Cheer"
+    },
+
+    
+    {
+      "name": "idle-annoyed",
+      "prefix": "BF idle dance",
+      "assetPath": "characters/bf-annoyed"
+    },
+    {
+      "name": "singLEFT-annoyed",
+      "prefix": "BF NOTE LEFT0",
+      "assetPath": "characters/bf-annoyed"
+    },
+    {
+      "name": "singDOWN-annoyed",
+      "prefix": "BF NOTE DOWN0",
+      "assetPath": "characters/bf-annoyed"
+    },
+    {
+      "name": "singUP-annoyed",
+      "prefix": "BF NOTE UP0",
+      "assetPath": "characters/bf-annoyed"
+    },
+    {
+      "name": "singRIGHT-annoyed",
+      "prefix": "BF NOTE RIGHT0",
+      "assetPath": "characters/bf-annoyed"
+    },
+    {
+      "name": "singLEFTmiss-annoyed",
+      "prefix": "BF NOTE LEFT MISS",
+      "assetPath": "characters/bf-annoyed"
+    },
+    {
+      "name": "singDOWNmiss-annoyed",
+      "prefix": "BF NOTE DOWN MISS",
+      "assetPath": "characters/bf-annoyed"
+    },
+    {
+      "name": "singUPmiss-annoyed",
+      "prefix": "BF NOTE UP MISS",
+      "assetPath": "characters/bf-annoyed"
+    },
+    {
+      "name": "singRIGHTmiss-annoyed",
+      "prefix": "BF NOTE RIGHT MISS",
+      "assetPath": "characters/bf-annoyed"
+    }
+  ]
+}
