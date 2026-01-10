@@ -1,1 +1,3 @@
+* Added Nicom Song
+* Added Bit 2
 * Redrew bit1 storymenu title
