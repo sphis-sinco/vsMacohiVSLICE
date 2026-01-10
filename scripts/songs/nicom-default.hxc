@@ -49,6 +49,8 @@ class Nicom_DefaultVariation_SongScript extends Song {
 			trace('played cutscene');
 		}
 
+		if (PlayState.instance.startTimestamp > 0) return;
+
 		Countdown.countdownStep = CountdownStep.AFTER;
 		Conductor.instance.update(PlayState.instance.startTimestamp);
 
@@ -56,6 +58,7 @@ class Nicom_DefaultVariation_SongScript extends Song {
 		PlayState.instance.startSong();
 
 		var countdownStep = CountdownStep.THREE;
+
 		new FlxTimer().start(Conductor.instance.beatLengthMs / 1000, function(tmr:FlxTimer) {
 			if (PlayState.instance == null)
 			{
