@@ -4,7 +4,7 @@ import funkin.play.PlayState;
 import funkin.play.stage.StageProp;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-import flixel.util.FlxTween;
+import flixel.tweens.FlxTween;
 import funkin.graphics.FunkinSprite;
 import funkin.Conductor;
 
