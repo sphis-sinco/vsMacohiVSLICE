@@ -63,7 +63,7 @@ class MacoroniDefault extends Song {
     cutsceneSprite = FunkinSprite.createSparrow(0,0, 'cutscenes/macoroni');
     cutsceneSprite.cameras = [PlayState.instance.camCutscene];
     cutsceneSprite.animation.addByPrefix('cutscene', 'IM MAKING FUCKING MAC AND CHEESE AND NO ONE CAN STOP ME', 24, false);
-    cutsceneSprite.setPosition(-140.05, -116.65);
+    cutsceneSprite.setPosition(-102.65, -141.75);
     cutsceneSprite.animation.play('cutscene');
 
     var portalSfx:FunkinSound = FunkinSound.load(Paths.sound("portal"), 1.0, true);
