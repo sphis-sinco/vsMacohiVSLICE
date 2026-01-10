@@ -91,6 +91,7 @@ class ComfortZone extends Song {
 			}
 		});
 		cutsceneSprite.animation.onFinish.add(function() {
+			breathingSfx.pause();
 			PlayState.instance.remove(bgSprite);
 			PlayState.instance.remove(cutsceneSprite);
 			PlayState.instance.refresh();
