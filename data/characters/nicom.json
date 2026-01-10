@@ -13,7 +13,7 @@
 		0,
 		0
 	],
-	"flipX": true,
+	"flipX": false,
 	"singTime": 8,
 	"startingAnimation": "idle",
 	"isPixel": false,
