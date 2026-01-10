@@ -1,8 +1,9 @@
 package objects;
 
 import funkin.graphics.FunkinSprite;
-using funkin.util.assets.FlxAnimationUtil;
+import funkin.util.assets.FlxAnimationUtil;
 import funkin.Paths;
+import flixel.util.FlxSignal;
 import haxe.Json;
 
 class CutsceneObject extends FunkinSprite
@@ -11,11 +12,12 @@ class CutsceneObject extends FunkinSprite
 
     public var cutscene:Dynamic = {};
 
-    public var onFinished:Void->Void = function(){};
+    public var onFinished:FlxSignal;
 
     override public function new(id:String)
     {
-        super();    
+        onFinished = new FlxSignal();
+
         if (id == null)
         {
             id = 'melo-tick';
@@ -38,12 +40,6 @@ class CutsceneObject extends FunkinSprite
         if (this.cutscene.animations == null)
         {
             trace('Null animations : you\'re fucked');
-        }
-
-        if (this.cutscene.assetPath == null)
-        {
-            this.cutscene.assetPath = 'cutscenes/melo-tick';
-            trace('Null Asset Path : defaulted to "cutscenes/melo-tick"');
         }
 
         if (this.cutscene.position == null)
@@ -69,18 +65,12 @@ class CutsceneObject extends FunkinSprite
             trace('Null Animation Order : defaulted to ' + this.cutscene.animationOrder);
         }
 
-        onFinished = function()
-        {
-            trace('Cutscene (`'+this.id+'`) done');
-        }
-
-        trace(cutscene);
-        this = FunkinSprite.createSparrow(0,0, this.cutscene.assetPath);
+        createCutsceneObject();
     }
 
     public function createCutsceneObject()
     {
-        this.addAtlasAnimations(this.cutscene.animations);
+        FlxAnimationUtil.addAtlasAnimations(this, this.cutscene.animations);
         
         this.setPosition(this.cutscene.position.x, this.cutscene.position.y);
 
@@ -89,7 +79,7 @@ class CutsceneObject extends FunkinSprite
         this.animation.onFinish.add(function() {
 
             if (this.cutscene.animationOrder.getIndexOf(this.animation.name) + 1 >= this.cutscene.animationOrder.length)
-                onFinished();
+                onFinished.dispath();
             else
                 this.animation.play(this.cutscene.animationOrder[this.cutscene.animationOrder.getIndexOf(this.animation.name) + 1]);
 
