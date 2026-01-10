@@ -8,7 +8,7 @@
 	"startingAnimation": "idle",
 	"death": {
 		"cameraOffsets": [
-			-73,
+			-63,
 			42
 		]
 	},
@@ -172,7 +172,6 @@
 			"looped": false,
 			"name": "hey"
 		},
-		,
 		{
 			"name": "firstDeath",
 			"prefix": "BF dies",

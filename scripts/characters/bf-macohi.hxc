@@ -1,6 +1,6 @@
 import flixel.FlxG;
 import funkin.audio.FunkinSound;
-import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.character.MultiSparrowCharacter;
 import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
 import funkin.Preferences;
@@ -15,7 +15,7 @@ import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
 import funkin.Preferences;
 
-class Boyfriend_Macohi_CharacterScript extends MultiAnimateAtlasCharacter
+class Boyfriend_Macohi_CharacterScript extends MultiSparrowCharacter
 {
   function new()
   {
