@@ -27,6 +27,10 @@ class Macohi extends MultiSparrowCharacter
 		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
 			switch (event.note.kind) 
 			{
+				case "MacohiIrritated":
+					holdTimer = 0;
+					this.playSingAnimation(event.note.noteData.getDirection(), false, 'irritated');
+					return;
 				case "MacohiBeepbox":
 					holdTimer = 0;
 					this.playSingAnimation(event.note.noteData.getDirection(), false, 'beepbox');
