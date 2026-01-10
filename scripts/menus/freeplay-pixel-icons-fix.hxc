@@ -1,0 +1,9 @@
+import funkin.modding.module.Module;
+
+class FreeplayPixelIconsFix_ModuleScript extends Module
+{
+    override function new()
+    {
+        super('freeplay-pixel-icons-fix');
+    }
+}

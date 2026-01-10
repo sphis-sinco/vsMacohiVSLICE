@@ -1,3 +1,4 @@
+* Added Freeplay Icons
 * Re-exported Macohi Icons
 * Added Nicom Song
 * Added Bit 2 (We're now in Macohi Album 2)
