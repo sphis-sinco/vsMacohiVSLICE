@@ -1,7 +1,0 @@
-* Macohi (ME!) has a role in the metadata now
-* Script class names have been renamed to follow a kinda format : (name_version_scriptType)
-* Added Macoroni Cutscene
-* Added Melo Tick Cutscene
-* Macohi idle looping has been set to false
-* Melo Tick (Erect) now has the display name : "Melo Tick (Erect)"
-* Added new song : Comfort Zone (Comes with a cutscene!)
