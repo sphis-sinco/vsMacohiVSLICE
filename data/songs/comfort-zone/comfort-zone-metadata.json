@@ -1,0 +1,62 @@
+{
+    "version": "2.2.4",
+    "songName": "Comfort Zone",
+    "artist": "Macohi",
+    "charter": "Macohi",
+    "divisions": 96,
+    "looped": false,
+    "offsets": {
+        "instrumental": 0,
+        "altInstrumentals": {},
+        "vocals": {},
+        "altVocals": {}
+    },
+    "playData": {
+        "songVariations": [],
+        "difficulties": [
+            "easy",
+            "normal",
+            "hard"
+        ],
+        "characters": {
+            "player": "macohi-comfort-zone",
+            "girlfriend": "",
+            "opponent": "",
+            "instrumental": "",
+            "altInstrumentals": [],
+            "opponentVocals": [
+                ""
+            ],
+            "playerVocals": [
+                "macohi-comfort-zone"
+            ]
+        },
+        "stage": "void-comfort-zone",
+        "noteStyle": "funkin",
+        "ratings": {
+            "easy": 3,
+            "normal": 3,
+            "hard": 4
+        },
+        "album": "macohiAlbum1",
+        "previewStart": 0,
+        "previewEnd": 0
+    },
+    "generatedBy": "Friday Night Funkin' - v0.8.1",
+    "timeFormat": "ms",
+    "timeChanges": [
+        {
+            "t": 0,
+            "b": 0,
+            "bpm": 80,
+            "n": 4,
+            "d": 4,
+            "bt": [
+                4,
+                4,
+                4,
+                4
+            ]
+        }
+    ]
+}
