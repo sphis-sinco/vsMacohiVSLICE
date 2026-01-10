@@ -1,2 +1,3 @@
-* Melo Tick (Erect) now has the display name : "Melo Tick (Erect)"* Added new song : Comfort Zone
+* Melo Tick (Erect) now has the display name : "Melo Tick (Erect)"
+* Added new song : Comfort Zone
 TODO: Fix macohi idle looping (set to false)
