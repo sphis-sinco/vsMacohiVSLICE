@@ -1,2 +1,3 @@
 cd ..\..\
 .\Funkin.exe
+cls
