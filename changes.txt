@@ -1,6 +1,0 @@
-* Changed macoroni difficulties by +1
-* Added Freeplay Pixel Icons
-* Re-exported Macohi Icons
-* Added Nicom Song
-* Added Bit 2 (We're now in Macohi Album 2)
-* Redrew bit1 storymenu title
