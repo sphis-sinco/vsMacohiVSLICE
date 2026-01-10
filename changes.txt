@@ -1,4 +1,5 @@
-* Added Freeplay Icons
+* Changed macoroni difficulties by +1
+* Added Freeplay Pixel Icons
 * Re-exported Macohi Icons
 * Added Nicom Song
 * Added Bit 2 (We're now in Macohi Album 2)

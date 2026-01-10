@@ -34,9 +34,9 @@
         "stage": "void-pico",
         "noteStyle": "funkin",
         "ratings": {
-            "easy": 5,
-            "hard": 8,
-            "normal": 6
+            "easy": 6,
+            "hard": 9,
+            "normal": 7
         },
         "album": "macohiAlbum1",
         "previewStart": 0,
