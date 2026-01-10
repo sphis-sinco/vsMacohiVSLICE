@@ -19,87 +19,87 @@
 	"isPixel": false,
 	"assetPath": "characters/nicom",
 	"healthIcon": {
-		"isPixel": false,
 		"offsets": [
 			0,
 			0
 		],
+		"isPixel": false,
 		"scale": 1,
-		"id": "nicom",
-		"flipX": false
+		"flipX": false,
+		"id": "nicom"
 	},
 	"atlasSettings": {
-		"swfMode": true,
 		"applyStageMatrix": false,
+		"swfMode": true,
 		"useRenderTexture": false,
-		"filterQuality": 1,
-		"cacheOnLoad": false
+		"cacheOnLoad": false,
+		"filterQuality": 1
 	},
 	"animations": [
 		{
+			"flipY": false,
 			"offsets": [
 				0,
 				0
 			],
-			"flipY": false,
 			"frameRate": 24,
 			"prefix": "nicom animation idle0",
-			"name": "idle",
-			"looped": false,
+			"animType": "framelabel",
 			"flipX": false,
-			"animType": "framelabel"
+			"looped": false,
+			"name": "idle"
 		},
 		{
-			"offsets": [
-				5,
-				-5
-			],
 			"flipY": false,
+			"offsets": [
+				13,
+				-18
+			],
 			"frameRate": 24,
 			"prefix": "nicom animation left0",
-			"name": "singLEFT",
-			"looped": false,
+			"animType": "framelabel",
 			"flipX": false,
-			"animType": "framelabel"
+			"looped": false,
+			"name": "singLEFT"
 		},
 		{
-			"offsets": [
-				-5,
-				-5
-			],
 			"flipY": false,
+			"offsets": [
+				-33,
+				-60
+			],
 			"frameRate": 24,
 			"prefix": "nicom animation down0",
-			"name": "singDOWN",
-			"looped": false,
+			"animType": "framelabel",
 			"flipX": false,
-			"animType": "framelabel"
+			"looped": false,
+			"name": "singDOWN"
 		},
 		{
-			"offsets": [
-				0,
-				30
-			],
 			"flipY": false,
+			"offsets": [
+				20,
+				40
+			],
 			"frameRate": 24,
 			"prefix": "nicom animation up0",
-			"name": "singUP",
-			"looped": false,
+			"animType": "framelabel",
 			"flipX": false,
-			"animType": "framelabel"
+			"looped": false,
+			"name": "singUP"
 		},
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"flipY": false,
+			"offsets": [
+				-15,
+				30
+			],
 			"frameRate": 24,
 			"prefix": "nicom animation right0",
-			"name": "singRIGHT",
-			"looped": false,
+			"animType": "framelabel",
 			"flipX": false,
-			"animType": "framelabel"
+			"looped": false,
+			"name": "singRIGHT"
 		}
 	]
 }
