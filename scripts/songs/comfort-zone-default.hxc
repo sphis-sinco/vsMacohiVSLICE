@@ -88,8 +88,9 @@ class ComfortZone_DefaultVariation_SongScript extends Song {
 					bgSprite.color = 0xFFFFFF;
 					portalSfx.pause();
 					FunkinSound.playOnce(Paths.sound('pop'), 0.5);
-				case 140:
+				case 120:
 					bgSprite.color = 0x000000;
+				case 140:
 					breathingSfx.play(false);
 				case 168:
 					FlxTween.tween(cutsceneSprite, {alpha: 0}, 1);
