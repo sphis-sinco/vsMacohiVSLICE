@@ -6,7 +6,7 @@ import flixel.util.FlxColor;
 
 using StringTools;
 
-class MeloTickErect extends Song {
+class MeloTick_ErectVariation_SongScript extends Song {
 	public function new() {
 		super('melo-tick', {
 			variation: 'erect'

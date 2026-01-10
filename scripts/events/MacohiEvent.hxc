@@ -3,7 +3,7 @@ import funkin.play.character.BaseCharacter;
 import funkin.play.event.SongEvent;
 import funkin.play.PlayState;
 
-class MacohiEventSongEvent extends SongEvent
+class MacohiEvent_EventScript extends SongEvent
 {
 	public function new()
 	{

@@ -13,7 +13,7 @@ import haxe.Json;
 
 using StringTools;
 
-class ComfortZone extends Song {
+class ComfortZone_DefaultVariation_SongScript extends Song {
 	var playedCutscene:Bool;
 	var bgSprite:FunkinSprite;
 	var cutsceneSprite:FunkinSprite;

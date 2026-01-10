@@ -20,7 +20,7 @@ import funkin.Preferences;
 import funkin.FunkinMemory;
 import flixel.text.FlxText;
 
-class PicoPlayerMacohiCharacter extends MultiSparrowCharacter
+class PicoPlayable_MacohiVersion_CharacterScript extends MultiSparrowCharacter
 {
   function new()
   {

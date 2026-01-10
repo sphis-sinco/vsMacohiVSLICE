@@ -12,7 +12,7 @@ import haxe.Json;
 
 using StringTools;
 
-class MeloTickDefault extends Song {
+class MeloTick_DefaultVariation_SongScript extends Song {
 
   var playedCutscene:Bool;
   var bgSprite:FunkinSprite;
