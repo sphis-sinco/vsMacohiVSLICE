@@ -9,17 +9,20 @@ import funkin.data.event.SongEventSchema.SongEventFieldType;
 
 class MacohiEventSongEvent extends SongEvent
 {
-	public function new() {
+	public function new()
+	{
 		super('MacohiEvent');
 	}
 
-	public override function handleEvent(data:SongEventData) {
+	public override function handleEvent(data:SongEventData)
+	{
 		// Does nothing if there is no PlayState camera or stage.
 		if (PlayState.instance == null || PlayState.instance.currentStage == null)
 			return;
 	}
 
-	public override function getTitle():String {
+	public override function getTitle():String
+	{
 		return "Macohi Event";
 	}
 
@@ -32,7 +35,8 @@ class MacohiEventSongEvent extends SongEvent
 	 * }
 	 * @return SongEventSchema
 	 */
-	public override function getEventSchema():SongEventSchema {
+	public override function getEventSchema():SongEventSchema
+	{
 		return new SongEventSchema([
 			{
 				name: "set_irritated",
