@@ -4,11 +4,15 @@ import funkin.play.PlayState;
 import funkin.play.PlayStatePlaylist;
 import funkin.audio.FunkinSound;
 import funkin.play.stage.StageProp;
+import funkin.Conductor;
+import funkin.play.Countdown;
+import funkin.play.CountdownStep;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import funkin.graphics.FunkinSprite;
 import funkin.util.assets.FlxAnimationUtil;
 import funkin.Paths;
+import flixel.util.FlxTimer;
 import haxe.Json;
 
 using StringTools;
@@ -26,7 +30,6 @@ class Nicom_DefaultVariation_SongScript extends Song {
 	override public function onCountdownStart(event:CountdownScriptEvent):Void {
 		super.onCountdownStart(event);
 
-		PlayState.instance.tweenCameraToPosition(0, -10000, 0);
 		if (true)// !PlayStatePlaylist.isStoryMode) 
 		{
 			playedCutscene = true;
@@ -41,9 +44,28 @@ class Nicom_DefaultVariation_SongScript extends Song {
 
 			PlayState.instance.camHUD.visible = false;
 			introCutscene();
+			return;
 		} else {
 			trace('played cutscene');
 		}
+
+		Countdown.countdownStep = CountdownStep.AFTER;
+		Conductor.instance.update(PlayState.instance.startTimestamp);
+
+		PlayState.instance.isInCountdown = false;
+		PlayState.instance.startSong();
+
+		var countdownStep = CountdownStep.THREE;
+		new FlxTimer().start(Conductor.instance.beatLengthMs / 1000, function(tmr:FlxTimer) {
+			if (PlayState.instance == null)
+			{
+				tmr.cancel();
+				return;
+			}
+
+			countdownStep = Countdown.decrement(countdownStep);
+			Countdown.showCountdownGraphic(countdownStep);
+		}, 5);
 	}
 
 	function introCutscene() {
