@@ -59,47 +59,47 @@
     {
       "name": "idle-annoyed",
       "prefix": "BF idle dance",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     },
     {
       "name": "singLEFT-annoyed",
       "prefix": "BF NOTE LEFT0",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     },
     {
       "name": "singDOWN-annoyed",
       "prefix": "BF NOTE DOWN0",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     },
     {
       "name": "singUP-annoyed",
       "prefix": "BF NOTE UP0",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     },
     {
       "name": "singRIGHT-annoyed",
       "prefix": "BF NOTE RIGHT0",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     },
     {
       "name": "singLEFTmiss-annoyed",
       "prefix": "BF NOTE LEFT MISS",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     },
     {
       "name": "singDOWNmiss-annoyed",
       "prefix": "BF NOTE DOWN MISS",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     },
     {
       "name": "singUPmiss-annoyed",
       "prefix": "BF NOTE UP MISS",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     },
     {
       "name": "singRIGHTmiss-annoyed",
       "prefix": "BF NOTE RIGHT MISS",
-      "assetPath": "characters/bf-annoyed"
+      "assetPath": "characters/boyfriend-annoyed"
     }
   ]
 }
