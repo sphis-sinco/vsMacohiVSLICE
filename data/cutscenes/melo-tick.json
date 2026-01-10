@@ -17,7 +17,7 @@
         }
     ],
     "assetPath": "cutscenes/melo-tick",
-    "animationOrder": ["cutscene"],
+    "startAnimation": "cutscene",
     "position": {
         "x": -140.05,
         "y": -116.65
