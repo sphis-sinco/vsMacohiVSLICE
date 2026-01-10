@@ -2,6 +2,7 @@ import funkin.play.song.Song;
 import funkin.graphics.shaders.DropShadowShader;
 import funkin.play.PlayState;
 import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
 import funkin.play.stage.StageProp;
 import flixel.util.FlxColor;
 import funkin.graphics.FunkinSprite;
@@ -65,6 +66,9 @@ class MeloTickDefault extends Song {
     cutsceneSprite.setPosition(-140.05, -116.65);
     cutsceneSprite.animation.play('cutscene');
 
+    var portalSfx:FunkinSound = FunkinSound.load(Paths.sound("portal"), 1.0, true);
+    portalSfx.pause();
+
     cutsceneSprite.animation.onFrameChange.add(function(animName:String, frameNumber:Int, frameIndex:Int) {
       // trace(frameNumber);
 
@@ -72,12 +76,17 @@ class MeloTickDefault extends Song {
       {
         case 0:
           trace('magic sound');
+          portalSfx.play(true);
         case 25:
           trace('pop sound');
+          portalSfx.pause();
+          FunkinSound.playOnce(Paths.sound('pop'), 0.5);
         case 60:
           trace('turnaround sound');
+          FunkinSound.playOnce(Paths.sound('small light switch 1'), 0.5);
         case 97:
           trace('"Dun!!" sound (like from that one fnf vid u saw that played from the start)');
+          FunkinSound.playOnce(Paths.sound('Lights_Shut_off', 'week5'), 1.0);
       }
     });
     cutsceneSprite.animation.onFinish.add(function() {
